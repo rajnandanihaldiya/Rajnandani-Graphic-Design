@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="comet-cursor.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+[data-theme=dark]{--bg:#1a1a18;--ink:#eceae4;--muted:#a19e95;--hair:rgba(236,234,228,.16);--card:#21211e;--leaf:#5fbf8c}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit;opacity:.8}
+</style>
+</helmet>
+<div data-theme="dark" id="top" style="background:var(--bg);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:30;background:var(--bg);box-shadow:0 1px 0 var(--hair)">
+  <nav aria-label="Case study" style="max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair);transition:background-color .15s ease,transform .1s ease" style-hover="background:var(--hair);opacity:1" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">← All work</a>
+    <a href="Portfolio v2.dc.html" style="font-family:'Newsreader',serif;font-size:19px;min-height:40px;display:flex;align-items:center" style-focus="outline:2px solid var(--ink);outline-offset:3px;border-radius:6px">Rajnandani Haldiya</a>
+    <span aria-hidden="true" style="width:104px"></span>
+  </nav>
+</header>
+
+<main style="max-width:1160px;margin:0 auto;padding:40px 20px 96px;display:flex;flex-direction:column;gap:96px">
+
+<section aria-labelledby="r-title" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:16px;max-width:780px">
+    <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)"><span aria-hidden="true" style="width:56px;height:1px;background:var(--muted)"></span>Rootopia · Brand identity</div>
+    <h1 id="r-title" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(34px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;text-wrap:balance">Plant care should feel <em style="color:var(--leaf)">effortless, not overwhelming</em></h1>
+    <p style="margin:0;font-size:18px;line-height:1.5;color:var(--muted);text-wrap:pretty;max-width:62ch">A warm, grounded identity for an all-in-one plant companion app: logo, palette, pattern, social and merchandise.</p>
+  </div>
+  <img src="assets/plant/p1.jpg" alt="Rootopia logo in white over a dark plant-filled interior" style="width:100%;aspect-ratio:1743/1240;object-fit:cover;border-radius:20px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+  <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px 32px;padding-top:20px;border-top:1px solid var(--hair);font-size:15px">
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Role</dt><dd style="margin:0">Brand designer</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Deliverables</dt><dd style="margin:0">Logo, palette, pattern, social, merch</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Related</dt><dd style="margin:0"><a href="Case Study Rootopia.dc.html" style="text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:from-font">Rootopia app case study →</a></dd></div>
+  </dl>
+</section>
+
+<section aria-labelledby="r-idea" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px 56px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">01 · The mark</span>
+    <h2 id="r-idea" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">A sprout that grows roots</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">The “T” becomes a seedling with roots spreading below the name: growth above, stability underneath. The tagline “Your garden just a tap away” arcs over it. The mark works in full colour, on sage, on mint and in single-colour charcoal.</p>
+  </div>
+  <img src="assets/plant/p4.jpg" alt="Rootopia logo with the tagline Your garden just a tap away, plus three app-icon versions on sage, mint and white" loading="lazy" style="width:100%;border-radius:16px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+</section>
+
+<section aria-labelledby="r-colour" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">02 · Colour &amp; texture</span>
+    <h2 id="r-colour" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Leaf and soil</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">Two greens for growth, a deep soil brown for warmth, on a soft off-white. Earthy colour, clean type and a leaf pattern keep the brand warm and dependable.</p>
+  </div>
+  <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:12px">
+    <sc-for list="{{ swatches }}" as="s" hint-placeholder-count="5">
+      <li style="display:flex;flex-direction:column;gap:10px">
+        <span aria-hidden="true" style="aspect-ratio:4/3;border-radius:14px;background:{{ s.hex }};box-shadow:inset 0 0 0 1px rgba(236,234,228,.16)"></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><strong style="font-size:15px;font-weight:600">{{ s.name }}</strong><span style="font-size:13px;color:var(--muted);text-transform:uppercase;font-variant-numeric:tabular-nums">{{ s.hex }}</span></span>
+      </li>
+    </sc-for>
+  </ul>
+  <img src="assets/plant/p3.jpg" alt="Moodboard: signage, leaf pattern on brown, palette strips, app screens, a social banner and a kraft flower wrap" loading="lazy" style="width:100%;border-radius:16px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+</section>
+
+<section aria-labelledby="r-apps" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">03 · Applications</span>
+    <h2 id="r-apps" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Social, storefront and merch</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:12px">
+    <figure style="margin:0;display:flex;flex-direction:column;gap:10px"><img src="assets/plant/p5.jpg" alt="Two Instagram posts: To plant a garden is to believe in tomorrow, and More than décor, real wellbeing" loading="lazy" style="width:100%;border-radius:16px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block"><figcaption style="font-size:13px;color:var(--muted)">Social content: quotes and plant benefits</figcaption></figure>
+    <figure style="margin:0;display:flex;flex-direction:column;gap:10px"><img src="assets/plant/p6.jpg" alt="Green shop awning with the Rootopia mark, a patterned flower wrap and logo on deep green" loading="lazy" style="width:100%;border-radius:16px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block"><figcaption style="font-size:13px;color:var(--muted)">Storefront and flower wrap</figcaption></figure>
+  </div>
+  <figure style="margin:0;display:flex;flex-direction:column;gap:10px"><img src="assets/plant/p7.jpg" alt="Plants make you relax post, a tote bag, a ROOTOPIA banner over leaves and sage swing tags" loading="lazy" style="width:100%;border-radius:16px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block"><figcaption style="font-size:13px;color:var(--muted)">Campaign banner, tote and swing tags</figcaption></figure>
+</section>
+
+<section aria-labelledby="r-out" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px 56px;align-items:start">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">04 · Outcome</span>
+    <h2 id="r-out" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">A brand that feels warm, grounded and dependable</h2>
+  </div>
+  <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">One identity that carries from the app icon to a shopfront, a social feed and a kraft-paper wrap, so Rootopia feels like a trusted companion wherever people meet it.</p>
+</section>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--hair)">
+  <a href="#top" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair)" style-hover="background:var(--hair);opacity:1" style-focus="outline:2px solid var(--ink);outline-offset:2px">Back to top ↑</a>
+  <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 18px;font-size:14px;font-weight:600;border-radius:999px;background:var(--ink);color:var(--bg)" style-hover="opacity:.9;color:var(--bg)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:3px">See more work →</a>
+</div>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      swatches: [
+        { name: 'Forest', hex: '#028043' },
+        { name: 'Leaf', hex: '#339969' },
+        { name: 'Soil', hex: '#552a00' },
+        { name: 'Linen', hex: '#fbf7f4' },
+        { name: 'Charcoal', hex: '#2a2a2a' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

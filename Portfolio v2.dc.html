@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="comet-cursor.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Caveat:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+@keyframes caret{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes heroUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+html{scroll-behavior:smooth}
+[data-theme=dark]{--bg:#1b1b1a;--ink:#eceae4;--muted:#a19e95;--line:#e6e3da;--hair:rgba(236,234,228,.16);--card:#21211e;--inv:#eceae4;--invink:#1a1a18}
+[data-theme=light]{--bg:#f3f0e8;--ink:#1c1b18;--muted:#5d5a53;--line:#1c1b18;--hair:rgba(28,27,24,.16);--card:#ebe7dc;--inv:#1c1b18;--invink:#f3f0e8}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit;opacity:.75}
+@keyframes steamUp{0%{transform:translateY(14px);opacity:0}35%{opacity:1}100%{transform:translateY(-34px);opacity:0}}
+@keyframes noteUp{0%{transform:translate(0,10px) rotate(-8deg);opacity:0}30%{opacity:1}100%{transform:translate(18px,-60px) rotate(10deg);opacity:0}}
+@keyframes zap{0%{stroke-dashoffset:60;opacity:.2}55%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:1;transform:translate(3px,-2px)}}
+@keyframes irk{0%,100%{transform:translate(0,0) rotate(0)}25%{transform:translate(-3px,1px) rotate(-4deg)}75%{transform:translate(3px,-1px) rotate(4deg)}}
+@keyframes sway{0%,100%{transform:rotate(-1.2deg)}50%{transform:rotate(1.2deg)}}
+@keyframes wiggle{0%,100%{transform:rotate(0) translateY(0)}25%{transform:rotate(-4deg) translateY(-4px)}75%{transform:rotate(4deg) translateY(-4px)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes deskIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes lampOn{from{filter:grayscale(1) brightness(.45)}60%{filter:grayscale(.2) brightness(1.15)}to{filter:none}}
+@keyframes glowOn{0%{opacity:0}35%{opacity:.6}45%{opacity:.3}100%{opacity:1}}
+@keyframes paintDrop{0%{opacity:0;transform:translateY(-70px)}55%{opacity:1;transform:translateY(5px) rotate(.4deg)}75%{transform:translateY(-2px) rotate(-.6deg)}90%{transform:translateY(0) rotate(.2deg)}100%{transform:none}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-46px)}to{opacity:1;transform:none}}
+@keyframes popIn{from{opacity:0;transform:translateY(10px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes girlIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes breathe{0%,100%{transform:none}50%{transform:translateY(-1.5px) rotate(.35deg)}}
+@keyframes lidOpen{0%{opacity:0;transform:scaleY(.05)}12%{opacity:1}80%{transform:scaleY(1.015)}100%{opacity:1;transform:none}}
+@keyframes pencilUp{0%{opacity:0;transform:translateY(55px)}35%{opacity:1}100%{opacity:1;transform:none}}
+@keyframes noteIn{from{opacity:0;transform:scale(.82)}to{opacity:1;transform:none}}
+@keyframes hpIn{0%{opacity:0;transform:translateY(-28px) rotate(-5deg)}65%{opacity:1;transform:translateY(2px) rotate(.6deg)}100%{opacity:1;transform:none}}
+@keyframes smallFlow{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes flicker{0%,100%{opacity:1}50%{opacity:.86}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</helmet>
+<div data-theme="{{ theme }}" style="background:var(--bg);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;min-height:100vh;transition:background .3s,color .3s" id="top">
+
+<sc-if value="{{ layA }}" hint-placeholder-val="{{ true }}">
+<header style="position:sticky;top:0;z-index:40;background:var(--bg);box-shadow:0 1px 0 var(--hair)">
+  <div style="max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <a href="#top" aria-label="Rajnandani Haldiya, back to top" style="font-family:'Newsreader',serif;font-size:20px;letter-spacing:-.01em;min-height:40px;display:flex;align-items:center" style-focus="outline:2px solid var(--ink);outline-offset:3px;border-radius:6px">Rajnandani Haldiya</a>
+    <div style="display:flex;align-items:center;gap:12px">
+      <nav aria-label="Sections" style="display:flex;gap:8px">
+        <a href="#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair);transition:background-color .15s ease,transform .1s ease" style-hover="background:var(--hair);opacity:1" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Projects</a>
+        <a href="About.dc.html" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair);transition:background-color .15s ease,transform .1s ease" style-hover="background:var(--hair);opacity:1" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">About</a>
+        <a href="assets/Rajnandani_Haldiya_GraphicDesigner_CV.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;font-weight:500;border-radius:999px;background:var(--inv);color:var(--invink);transition:opacity .15s ease,transform .1s ease" style-hover="opacity:.88;color:var(--invink)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Resume</a>
+      </nav>
+      <button onClick="{{ toggleMusic }}" aria-pressed="{{ musicOn }}" aria-label="{{ musicAria }}" title="{{ musicAria }}" style="width:40px;height:40px;border-radius:50%;border:none;box-shadow:inset 0 0 0 1px var(--hair);background:transparent;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;flex:none;transition:background-color .15s ease,transform .1s ease" style-hover="background:var(--hair)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"><path d="M9 18V5l11-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="17" cy="16" r="3"></circle><path d="M3 3 L21 21" style="opacity:{{ muteOp }};transition:opacity .2s"></path></svg></button>
+    </div>
+  </div>
+</header>
+</sc-if>
+<sc-if value="{{ layNotA }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;top:18px;right:22px;z-index:40;display:flex;gap:8px">
+  <button onClick="{{ toggleMusic }}" aria-pressed="{{ musicOn }}" aria-label="{{ musicAria }}" title="{{ musicAria }}" style="width:40px;height:40px;border-radius:50%;border:1px solid var(--hair);background:var(--bg);color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M9 18V5l11-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="17" cy="16" r="3"></circle><path d="M3 3 L21 21" style="opacity:{{ muteOp }};transition:opacity .2s"></path></svg></button>
+</div>
+</sc-if>
+
+<main>
+<section aria-label="Introduction" style="max-width:1240px;margin:0 auto;padding:56px 28px 0">
+  <sc-if value="{{ layA }}" hint-placeholder-val="{{ true }}">
+  <div style="position:relative;z-index:3;max-width:735px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 48px;align-items:end">
+    <div style="display: flex; flex-direction: column; gap: 13px">
+      <span style="align-self:flex-start;display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.02em;padding:6px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair);color:var(--muted);animation:heroUp .5s cubic-bezier(.2,0,0,1) 0s both"><span aria-hidden="true" style="width:6px;height:6px;border-radius:50%;background:oklch(0.78 0.12 150)"></span>Open to work</span>
+      <h1 style="margin: 0; font-family: 'Newsreader',serif; font-weight: 400; font-size: 36px; line-height: 1; letter-spacing: -.03em; text-wrap: balance; animation: heroUp .5s cubic-bezier(.2,0,0,1) .1s both">Rajnandani Haldiya</h1>
+      <p style="margin:0;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);animation:heroUp .5s cubic-bezier(.2,0,0,1) .2s both;min-height:1.5em;display:flex;align-items:center"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Graphic designer, visual designer, brand designer</span><span aria-hidden="true">{{ roleText }}</span><span aria-hidden="true" style="display:inline-block;width:1.5px;height:1.15em;margin-inline-start:3px;background:var(--ink);animation:caret 1s steps(1) infinite"></span></p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:60ch;animation:heroUp .5s cubic-bezier(.2,0,0,1) .3s both">
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #FFE626; text-wrap: pretty"><b>Ideas, made visible<br></b><span style="color: var(--muted); text-wrap-mode: initial;">Brand identities, campaigns and social content that read at a glance and stay in memory.</span></p>
+      <p style="margin:0;font-size:14px;color:var(--muted)">Previously at <a href="https://www.mcciapune.com/" target="_blank" rel="noopener noreferrer" style="color:var(--ink);text-decoration:underline;text-decoration-color:var(--hair);text-decoration-thickness:from-font;text-underline-offset:3px;text-decoration-skip-ink:auto;transition:text-decoration-color .15s ease" style-hover="text-decoration-color:var(--ink);opacity:1" style-focus="outline:2px solid var(--ink);outline-offset:2px;border-radius:2px">MCCIA</a> and <a href="https://corporate.agrostar.in/" target="_blank" rel="noopener noreferrer" style="color:var(--ink);text-decoration:underline;text-decoration-color:var(--hair);text-decoration-thickness:from-font;text-underline-offset:3px;text-decoration-skip-ink:auto;transition:text-decoration-color .15s ease" style-hover="text-decoration-color:var(--ink);opacity:1" style-focus="outline:2px solid var(--ink);outline-offset:2px;border-radius:2px">AgroStar</a></p>
+    </div>
+  </div>
+
+  </sc-if>
+  <sc-if value="{{ layB }}" hint-placeholder-val="{{ false }}">
+    
+  </sc-if>
+  <div onClick="{{ closePanel }}" style="position: relative; margin-top: {{ deskMt }}; margin-left: auto; margin-right: auto; user-select: none; overflow: visible; width: 735px; max-width: 100%">
+    <sc-if value="{{ layD }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;left:0;bottom:calc(100% - 12%);width:26%;display:flex;flex-direction:column;gap:12px;pointer-events:none;z-index:2">
+        <span style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Graphic · Visual · Brand Designer</span>
+        <h1 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(30px,3.6vw,52px);line-height:.95;letter-spacing:-.025em">Rajnandani<br>Haldiya</h1>
+      </div>
+      <div style="position:absolute;right:0;top:0;display:flex;flex-direction:column;align-items:flex-end;gap:12px;z-index:2">
+        <nav aria-label="Sections" style="display:flex;flex-wrap:wrap;gap:8px">
+        <a href="#work" style="font-size:13px;padding:7px 14px;border:1px solid var(--ink);border-radius:999px">Projects</a>
+        <a href="About.dc.html" style="font-size:13px;padding:7px 14px;border:1px solid var(--ink);border-radius:999px">About</a>
+        <a href="assets/Rajnandani_Haldiya_GraphicDesigner_CV.pdf" target="_blank" rel="noopener noreferrer" style="font-size:13px;padding:7px 14px;border-radius:999px;background:var(--inv);color:var(--invink);border:1px solid var(--inv)">Resume</a>
+      </nav>
+      </div>
+    </sc-if>
+
+    
+
+    <sc-if value="{{ showLabel }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;left:{{ labelLeft }};top:{{ labelTop }};transform:{{ labelTf }};pointer-events:none;color:var(--ink);font-family:'Caveat',cursive;font-size:clamp(18px,2vw,24px);white-space:nowrap;display:flex;flex-direction:column;align-items:center;line-height:1;z-index:5">{{ labelText }}</div>
+    </sc-if>
+
+    <sc-if value="{{ panelOpen }}" hint-placeholder-val="{{ false }}">
+      <div role="dialog" aria-label="{{ panel.title }}" onClick="{{ stop }}" style="position:absolute;left:{{ panelLeft }};top:{{ panelTop }};transform:{{ panelTf }};width:min(320px,86vw);background:var(--bg);color:var(--ink);border:1.5px solid var(--ink);border-radius:12px;padding:18px 18px 16px;z-index:10;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+          <div style="display:flex;flex-direction:column;gap:3px">
+            <span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">{{ panel.kicker }}</span>
+            <span style="font-family:'Newsreader',serif;font-size:24px;line-height:1.1">{{ panel.title }}</span>
+          </div>
+          <button onClick="{{ closePanel }}" aria-label="Close panel" style="flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--hair);background:transparent;color:var(--ink);font-size:15px;cursor:pointer">✕</button>
+        </div>
+        <sc-if value="{{ panel.body }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:0;font-size:14px;line-height:1.55;color:var(--muted);text-wrap:pretty">{{ panel.body }}</p>
+        </sc-if>
+        <sc-if value="{{ panel.quote }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:0;font-family:'Caveat',cursive;font-size:30px;line-height:1.1">{{ panel.quote }}</p>
+        </sc-if>
+        <div style="display:flex;flex-direction:column">
+          <sc-for list="{{ panel.items }}" as="it" hint-placeholder-count="0">
+            <a href="{{ it.href }}" style="display:flex;gap:12px;align-items:baseline;padding:9px 0;border-top:1px solid var(--hair)">
+              <span style="font-size:11px;color:var(--muted);width:16px;flex:none">{{ it.n }}</span>
+              <span style="display:flex;flex-direction:column;gap:2px;flex:1"><span style="font-size:14px;font-weight:500">{{ it.label }}</span><span style="font-size:12px;color:var(--muted)">{{ it.sub }}</span></span>
+              <span style="font-size:13px">{{ it.arrow }}</span>
+            </a>
+          </sc-for>
+        </div>
+        <sc-if value="{{ panel.link }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ panel.link.href }}" onClick="{{ closePanel }}" style="align-self:flex-start;font-size:13px;font-weight:500;border-bottom:1px solid var(--ink);padding-bottom:1px">{{ panel.link.label }}</a>
+        </sc-if>
+      </div>
+    </sc-if>
+  <svg viewBox="0 120 1852 640" role="group" aria-label="Interactive workspace. Each object on the desk opens part of the portfolio." style="width: 100%; height: auto; display: block; overflow: visible; stroke: none; opacity: 1">
+      <defs><radialGradient id="gl-blue"><stop offset="0" stop-color="oklch(0.75 0.16 245)" stop-opacity=".7"></stop><stop offset=".55" stop-color="oklch(0.75 0.16 245)" stop-opacity=".22"></stop><stop offset="1" stop-color="oklch(0.75 0.16 245)" stop-opacity="0"></stop></radialGradient><radialGradient id="gl-yellow"><stop offset="0" stop-color="oklch(0.92 0.15 95)" stop-opacity=".7"></stop><stop offset=".55" stop-color="oklch(0.92 0.15 95)" stop-opacity=".22"></stop><stop offset="1" stop-color="oklch(0.92 0.15 95)" stop-opacity="0"></stop></radialGradient><radialGradient id="gl-pink"><stop offset="0" stop-color="oklch(0.75 0.16 10)" stop-opacity=".7"></stop><stop offset=".55" stop-color="oklch(0.75 0.16 10)" stop-opacity=".22"></stop><stop offset="1" stop-color="oklch(0.75 0.16 10)" stop-opacity="0"></stop></radialGradient><radialGradient id="gl-green"><stop offset="0" stop-color="oklch(0.8 0.16 150)" stop-opacity=".7"></stop><stop offset=".55" stop-color="oklch(0.8 0.16 150)" stop-opacity=".22"></stop><stop offset="1" stop-color="oklch(0.8 0.16 150)" stop-opacity="0"></stop></radialGradient><radialGradient id="gl-violet"><stop offset="0" stop-color="oklch(0.72 0.16 300)" stop-opacity=".7"></stop><stop offset=".55" stop-color="oklch(0.72 0.16 300)" stop-opacity=".22"></stop><stop offset="1" stop-color="oklch(0.72 0.16 300)" stop-opacity="0"></stop></radialGradient><radialGradient id="gl-hot"><stop offset="0" stop-color="oklch(0.72 0.18 45)" stop-opacity=".7"></stop><stop offset=".55" stop-color="oklch(0.72 0.18 45)" stop-opacity=".22"></stop><stop offset="1" stop-color="oklch(0.72 0.18 45)" stop-opacity="0"></stop></radialGradient><linearGradient id="cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="oklch(0.96 0.13 95)" stop-opacity=".8"></stop><stop offset="1" stop-color="oklch(0.96 0.13 95)" stop-opacity="0"></stop></linearGradient></defs>
+      <g style="opacity:.78;filter:saturate(.75)">
+        <image href="{{ ly.desk }}" x="0" y="0" width="1852" height="849" style="animation:deskIn 1.1s ease-out .1s both"></image>
+        <g style="transform-box:fill-box;transform-origin:50% 0;animation:paintDrop 1.1s cubic-bezier(.3,.7,.35,1) 1.5s both">
+          <image href="{{ ly.painting }}" x="492" y="140" width="300" height="288"></image>
+          <image href="assets/painting.png" x="519" y="209" width="247" height="193" preserveAspectRatio="none" style="filter:{{ paintFilter }}"></image>
+        </g>
+        <image href="{{ ly.lamp }}" x="140" y="350" width="332" height="353" style="animation:fadeIn .7s ease .5s both, lampOn 1.1s ease 1.2s both"></image>
+        <g style="transform-box:fill-box;transform-origin:50% 50%;animation:slideIn .8s cubic-bezier(.25,.8,.3,1) 2s both"><image href="{{ ly.notebook }}" x="412" y="538" width="174" height="165"></image></g>
+        <g style="transform-box:fill-box;transform-origin:50% 100%;animation:popIn .6s cubic-bezier(.3,.8,.3,1) 2.4s both"><image href="{{ ly.cup }}" x="622" y="618" width="112" height="85"></image></g>
+        <g style="transform-box:fill-box;transform-origin:50% 100%;animation:girlIn 1s cubic-bezier(.3,.7,.3,1) 2.7s both, breathe 6s ease-in-out 3.8s infinite"><image href="{{ ly.girl }}" x="728" y="258" width="560" height="445"></image></g>
+        <g style="transform-box:fill-box;transform-origin:50% 100%;animation:lidOpen 1s cubic-bezier(.35,.6,.25,1) 3.2s both"><image href="{{ ly.laptop }}" x="812" y="512" width="386" height="191"></image></g>
+        <g style="transform-box:fill-box;transform-origin:50% 100%;animation:pencilUp .55s cubic-bezier(.3,1.4,.5,1) 3.85s both"><image href="{{ ly.p1 }}" x="1292" y="512" width="26" height="86"></image></g>
+        <g style="transform-box:fill-box;transform-origin:50% 100%;animation:pencilUp .55s cubic-bezier(.3,1.4,.5,1) 3.97s both"><image href="{{ ly.p2 }}" x="1318" y="512" width="24" height="86"></image></g>
+        <g style="transform-box:fill-box;transform-origin:50% 100%;animation:pencilUp .55s cubic-bezier(.3,1.4,.5,1) 4.09s both"><image href="{{ ly.p3 }}" x="1342" y="512" width="26" height="86"></image></g>
+        <g style="transform-box:fill-box;transform-origin:50% 100%;animation:pencilUp .55s cubic-bezier(.3,1.4,.5,1) 4.21s both"><image href="{{ ly.p4 }}" x="1368" y="512" width="32" height="86"></image></g>
+        <g style="transform-box:fill-box;transform-origin:50% 100%;animation:popIn .5s ease-out 3.6s both"><image href="{{ ly.holder }}" x="1292" y="598" width="102" height="105"></image></g>
+        <g style="transform-box:fill-box;transform-origin:50% 100%;animation:hpIn 1s cubic-bezier(.3,.7,.3,1) 4.8s both"><image href="{{ ly.headphones }}" x="1435" y="568" width="291" height="135"></image></g>
+      </g>
+      <g style="mix-blend-mode:{{ glowBlend }};pointer-events:none">
+        
+        
+        <g style="animation:glowOn 1.4s ease 1.3s both"><g style="opacity:{{ o.lamp.cone }};transition:opacity .35s"><g style="animation:flicker 4s ease-in-out infinite"><path d="M300 495 L460 468 L590 705 L170 705 Z" style="fill:url(#cone)"></path><circle cx="372" cy="488" r="130" style="fill:url(#gl-yellow)"></circle></g></g></g>
+      </g>
+      <g style="pointer-events:none">
+        <g style="transform-box:fill-box;transform-origin:50% 0;animation:noteIn .6s cubic-bezier(.3,.8,.3,1) 4.3s both"><g style="animation:{{ o.note1.sway }};transform-box:fill-box;transform-origin:50% 0"><g style="opacity:.78;filter:saturate(.75)"><image href="{{ ly.n1 }}" x="1232" y="280" width="112" height="136"></image></g><g transform="rotate(-1.5 1288 360)">
+          <rect x="1249" y="321" width="79" height="80" style="fill:#e7ceb1;stroke:{{ noteStroke }};stroke-width:0"></rect>
+          <g style="font-family:'Caveat',cursive;font-weight:500;fill:#1c1b18;font-size:18px">
+            <text x="1254" y="340">Design is</text><text x="1254" y="358">thinking</text><text x="1254" y="376">made</text><text x="1254" y="394">visual.</text>
+          </g>
+        </g></g></g>
+        <g style="transform-box:fill-box;transform-origin:50% 0;animation:noteIn .6s cubic-bezier(.3,.8,.3,1) 4.5s both"><g style="animation:{{ o.note2.sway }};transform-box:fill-box;transform-origin:50% 0"><g style="opacity:.78;filter:saturate(.75)"><image href="{{ ly.n2 }}" x="1356" y="304" width="111" height="139"></image></g><rect x="1372" y="344" width="80" height="84" style="fill:#afbad2"></rect>
+        <g style="font-family:'Caveat',cursive;font-weight:500;fill:#1c1b18;font-size:18px">
+          <text x="1377" y="366">Do it</text><text x="1377" y="384">unmotivated.</text><text x="1377" y="406" style="font-size:15px">Just do it.</text>
+        </g></g></g>
+        <g style="transform-box:fill-box;transform-origin:50% 0;animation:noteIn .6s cubic-bezier(.3,.8,.3,1) 4.7s both"><g style="animation:{{ o.note3.sway }};transform-box:fill-box;transform-origin:50% 0"><g style="opacity:.78;filter:saturate(.75)"><image href="{{ ly.n3 }}" x="1482" y="358" width="118" height="142"></image></g><g transform="rotate(-3 1538 443)">
+          <rect x="1497" y="402" width="83" height="82" style="fill:#f1b5a3"></rect>
+          <g style="font-family:'Caveat',cursive;font-weight:500;fill:#1c1b18;font-size:18px">
+            <text x="1503" y="422">What if</text><text x="1503" y="440">it all</text><text x="1503" y="458">works</text><text x="1503" y="476">out?</text>
+          </g>
+        </g></g></g>
+      </g>
+      
+      <g id="sticky-note-1" tabindex="0" role="button" aria-label="Sticky note — design principle" onMouseEnter="{{ o.note1.enter }}" onMouseLeave="{{ o.note1.leave }}" onFocus="{{ o.note1.enter }}" onBlur="{{ o.note1.leave }}" onClick="{{ o.note1.click }}" onKeyDown="{{ o.note1.key }}" style="cursor:pointer;outline:none">
+          <rect x="1225" y="285" width="125" height="135" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <g id="sticky-note-2" tabindex="0" role="button" aria-label="Sticky note — note to self" onMouseEnter="{{ o.note2.enter }}" onMouseLeave="{{ o.note2.leave }}" onFocus="{{ o.note2.enter }}" onBlur="{{ o.note2.leave }}" onClick="{{ o.note2.click }}" onKeyDown="{{ o.note2.key }}" style="cursor:pointer;outline:none">
+          <rect x="1352" y="308" width="120" height="140" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <g id="sticky-note-3" tabindex="0" role="button" aria-label="Sticky note — note to self" onMouseEnter="{{ o.note3.enter }}" onMouseLeave="{{ o.note3.leave }}" onFocus="{{ o.note3.enter }}" onBlur="{{ o.note3.leave }}" onClick="{{ o.note3.click }}" onKeyDown="{{ o.note3.key }}" style="cursor:pointer;outline:none">
+          <rect x="1476" y="362" width="125" height="140" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <g id="lamp" tabindex="0" role="button" aria-label="Desk lamp" onMouseEnter="{{ o.lamp.enter }}" onMouseLeave="{{ o.lamp.leave }}" onFocus="{{ o.lamp.enter }}" onBlur="{{ o.lamp.leave }}" onClick="{{ o.lamp.click }}" onKeyDown="{{ o.lamp.key }}" style="cursor:pointer;outline:none">
+          <rect x="145" y="352" width="330" height="355" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <g id="notebook" tabindex="3" role="button" aria-label="Notebook — how I work" onMouseEnter="{{ o.notebook.enter }}" onMouseLeave="{{ o.notebook.leave }}" onFocus="{{ o.notebook.enter }}" onBlur="{{ o.notebook.leave }}" onClick="{{ o.notebook.click }}" onKeyDown="{{ o.notebook.key }}" style="cursor:pointer;outline:none">
+          <rect x="410" y="540" width="172" height="165" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <g style="pointer-events:none;fill:none;stroke:rgb(250,215,140);stroke-linecap:round;animation:fadeIn .6s ease 3.6s both">
+          <path d="M1125 304 L1140 281" style="stroke-width:5;stroke-dasharray:60;stroke-dashoffset:0;animation-name:{{ zapName }};animation-duration:.42s;animation-timing-function:ease-out;animation-iteration-count:infinite;animation-direction:alternate;animation-delay:0s"></path>
+          <path d="M1144 328 L1181 316" style="stroke-width:4.5;stroke-dasharray:60;stroke-dashoffset:0;animation-name:{{ zapName }};animation-duration:.42s;animation-timing-function:ease-out;animation-iteration-count:infinite;animation-direction:alternate;animation-delay:.12s"></path>
+          <path d="M1146 360 L1168 365" style="stroke-width:3.5;stroke-dasharray:60;stroke-dashoffset:0;animation-name:{{ zapName }};animation-duration:.42s;animation-timing-function:ease-out;animation-iteration-count:infinite;animation-direction:alternate;animation-delay:.24s"></path>
+        </g>
+      <g id="painting" tabindex="0" role="button" aria-label="Painting — I drew this" onMouseEnter="{{ o.painting.enter }}" onMouseLeave="{{ o.painting.leave }}" onFocus="{{ o.painting.enter }}" onBlur="{{ o.painting.leave }}" onClick="{{ o.painting.click }}" onKeyDown="{{ o.painting.key }}" style="cursor:pointer;outline:none">
+          <rect x="498" y="186" width="290" height="236" style="fill:transparent;stroke:none"></rect>
+        </g>
+      <g id="coffee-cup" tabindex="0" role="button" aria-label="Coffee cup" onMouseEnter="{{ o.cup.enter }}" onMouseLeave="{{ o.cup.leave }}" onFocus="{{ o.cup.enter }}" onBlur="{{ o.cup.leave }}" onClick="{{ o.cup.click }}" onKeyDown="{{ o.cup.key }}" style="cursor:pointer;outline:none">
+          <rect x="626" y="548" width="104" height="155" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <g id="me" tabindex="0" role="button" aria-label="That's me, working" onMouseEnter="{{ o.me.enter }}" onMouseLeave="{{ o.me.leave }}" onFocus="{{ o.me.enter }}" onBlur="{{ o.me.leave }}" onClick="{{ o.me.click }}" onKeyDown="{{ o.me.key }}" style="cursor:pointer;outline:none">
+          <rect x="880" y="262" width="265" height="255" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <path d="M730 690 L740 600 L816 560 L816 700 Z M1192 560 L1270 600 L1280 690 L1192 700 Z" id="me-arms" style="fill:transparent;cursor:pointer" onMouseEnter="{{ o.me.enter }}" onMouseLeave="{{ o.me.leave }}" onClick="{{ o.me.click }}"></path>
+      <g id="laptop" tabindex="0" role="button" aria-label="Laptop — explore my work" onMouseEnter="{{ o.laptop.enter }}" onMouseLeave="{{ o.laptop.leave }}" onFocus="{{ o.laptop.enter }}" onBlur="{{ o.laptop.leave }}" onClick="{{ o.laptop.click }}" onKeyDown="{{ o.laptop.key }}" style="cursor:pointer;outline:none">
+          <rect x="810" y="512" width="388" height="200" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <g id="pen-stand" tabindex="0" role="button" aria-label="Pen stand" onMouseEnter="{{ o.pens.enter }}" onMouseLeave="{{ o.pens.leave }}" onFocus="{{ o.pens.enter }}" onBlur="{{ o.pens.leave }}" onClick="{{ o.pens.click }}" onKeyDown="{{ o.pens.key }}" style="cursor:pointer;outline:none">
+          <rect x="1288" y="515" width="105" height="185" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <g id="headphones" tabindex="0" role="button" aria-label="Headphones" onMouseEnter="{{ o.headphones.enter }}" onMouseLeave="{{ o.headphones.leave }}" onFocus="{{ o.headphones.enter }}" onBlur="{{ o.headphones.leave }}" onClick="{{ o.headphones.click }}" onKeyDown="{{ o.headphones.key }}" style="cursor:pointer;outline:none">
+          <rect x="1435" y="570" width="240" height="140" style="fill:transparent;stroke:none"></rect>
+          
+        </g>
+      <g style="pointer-events:none;stroke:var(--line);stroke-width:3.5;fill:none;stroke-linecap:round;opacity:.8;animation:fadeIn 1s ease 2.9s both" transform="translate(104 22)">
+        <path d="M562 590 C550 572 574 562 562 544 C552 528 572 518 562 502" style="animation:steamUp 1.8s ease-out infinite"></path>
+        <path d="M583 590 C571 572 595 562 583 544 C573 528 593 518 583 502" style="animation:steamUp 1.8s ease-out .6s infinite"></path>
+        <path d="M604 590 C592 572 616 562 604 544 C594 528 614 518 604 502" style="animation:steamUp 1.8s ease-out 1.2s infinite"></path>
+      </g>
+      <g style="pointer-events:none;opacity:{{ o.headphones.glow }};transition:opacity .3s;fill:var(--line);font-size:44px;font-family:serif">
+        <text x="1490" y="565" style="animation:noteUp 2.2s ease-out infinite;transform-box:fill-box">♪</text>
+        <text x="1560" y="545" style="animation:noteUp 2.2s ease-out .7s infinite;transform-box:fill-box">♫</text>
+        <text x="1625" y="575" style="animation:noteUp 2.2s ease-out 1.4s infinite;transform-box:fill-box">♪</text>
+      </g>
+    </svg></div>
+  <sc-if value="{{ layA }}" hint-placeholder-val="{{ true }}">
+    <p style="margin:16px auto 0;max-width:735px;text-align:center;font-size:13px;color:var(--muted);animation:heroUp .5s cubic-bezier(.2,0,0,1) 5.6s both">Hover or tab through the desk — each object opens part of my work.</p>
+  </sc-if>
+
+  
+<sc-if value="{{ layC }}" hint-placeholder-val="{{ false }}">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:28px 48px;align-items:start;padding:26px 0 8px;border-top:1px solid var(--hair)">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h1 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(36px,4vw,52px);line-height:.98;letter-spacing:-.025em">Rajnandani Haldiya</h1>
+        <p style="margin:0;font-size:13px;letter-spacing:.12em;text-transform:uppercase">Graphic Designer · Visual Designer · Brand Designer</p>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:var(--muted);text-wrap:pretty">A designer with a background in <span style="color:var(--ink)">brand, campaign and social design</span>, making work that speaks to its audience in their own language, from farmers in Hindi to founders on Instagram.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+        <span style="display:flex;align-items:center;gap:8px;font-size:12px;padding:6px 12px;border:1px solid var(--hair);border-radius:999px;color:var(--muted)"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.78 0.12 150)"></span>Freelance graphic &amp; brand designer · Open to design roles</span>
+        <nav aria-label="Sections" style="display:flex;flex-wrap:wrap;gap:8px">
+        <a href="#work" style="font-size:13px;padding:7px 14px;border:1px solid var(--ink);border-radius:999px">Projects</a>
+        <a href="About.dc.html" style="font-size:13px;padding:7px 14px;border:1px solid var(--ink);border-radius:999px">About</a>
+        <a href="assets/Rajnandani_Haldiya_GraphicDesigner_CV.pdf" target="_blank" rel="noopener noreferrer" style="font-size:13px;padding:7px 14px;border-radius:999px;background:var(--inv);color:var(--invink);border:1px solid var(--inv)">Resume</a>
+      </nav>
+      </div>
+    </div>
+  </sc-if>
+<sc-if value="{{ layD }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding:22px 0 8px;border-top:1px solid var(--hair)">
+      <p style="margin:0;max-width:560px;font-size:15px;line-height:1.6;color:var(--muted);text-wrap:pretty">A designer with a background in <span style="color:var(--ink)">brand, campaign and social design</span>, making work that speaks to its audience in their own language, from farmers in Hindi to founders on Instagram.</p>
+      <span style="display:flex;align-items:center;gap:8px;font-size:12px;padding:6px 12px;border:1px solid var(--hair);border-radius:999px;color:var(--muted)"><span style="width:6px;height:6px;border-radius:50%;background:oklch(0.78 0.12 150)"></span>Freelance graphic &amp; brand designer · Open to design roles</span>
+    </div>
+  </sc-if>
+  <div style="position:fixed;left:18px;bottom:18px;z-index:40;display:flex;align-items:center;gap:4px;padding:4px;border-radius:999px;background:var(--bg);border:1px solid var(--hair)">
+    <span style="font-size:11px;color:var(--muted);padding:0 8px">Hero</span>
+    <sc-for list="{{ layOpts }}" as="l" hint-placeholder-count="4">
+      <button onClick="{{ l.pick }}" title="{{ l.name }}" style="font:600 12px 'Instrument Sans',sans-serif;width:30px;height:30px;border-radius:50%;border:none;cursor:pointer;background:{{ l.bg }};color:{{ l.fg }}">{{ l.id }}</button>
+    </sc-for>
+  </div>
+</section>
+
+<section id="work" style="max-width:1240px;margin:0 auto;padding:96px 28px 40px;scroll-margin-top:60px">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: end; gap: 16px; margin-bottom: 40px; opacity: 0.63">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      
+      <h2 style="margin: 0; font-family: 'Newsreader',serif; font-weight: 400; font-size: clamp(36px,4.5vw,56px); letter-spacing: -.02em; line-height: 1; text-align: center">BRAND · CAMPAIGN · CONTENT</h2>
+    </div>
+    
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,max(300px,calc((100% - 20px) / 2))),1fr));gap:20px">
+    <article style="display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid var(--hair);border-radius:16px;background:var(--card)" style-hover="border-color:var(--ink)">
+    <img src="assets/agrostar/rf-whatsapp.jpg" alt="AgroStar Red Friday campaign creative" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+    <div style="display:flex;flex-direction:column;gap:12px;justify-content:space-between">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:11px;padding:3px 9px;border:1px solid var(--hair);border-radius:999px">Campaigns · Social · Ads</span><span style="font-size:11px;padding:3px 9px;border-radius:999px;background:oklch(0.8 0.12 25);color:#1c1b18">Agritech</span></div>
+        <h3 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:22px;line-height:1.1;letter-spacing:-.015em">AgroStar</h3>
+        <p style="margin:0;font-size:14px;line-height:1.5;text-wrap:pretty">Campaigns, product launches, ads and festive posts for India’s farmers, in Hindi, Marathi and Gujarati.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:end;padding-top:12px;border-top:1px solid var(--hair)">
+        <div style="font-size:12px;line-height:1.45;color:var(--muted)">Role<br><span style="color:var(--ink)">Graphic Design Intern</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px"><a href="Case Study AgroStar.dc.html" style="display:inline-flex;align-items:center;min-height:36px;padding:0 14px;font-size:13px;font-weight:500;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;background:var(--inv);color:var(--invink)" style-hover="opacity:.88;color:var(--invink)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Open project →</a></div>
+      </div>
+    </div>
+  </article>
+  <article style="display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid var(--hair);border-radius:16px;background:var(--card)" style-hover="border-color:var(--ink)">
+    <img src="assets/branding/cover-v1-v2.png" alt="24 Hours V1 app icon beside the twentyfour V2 Today screen" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+    <div style="display:flex;flex-direction:column;gap:12px;justify-content:space-between">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:11px;padding:3px 9px;border:1px solid var(--hair);border-radius:999px">Brand evolution · V1 → V2</span><span style="font-size:11px;padding:3px 9px;border-radius:999px;background:#9fbaf1;color:#1c1b18">Rebrand</span></div>
+        <h3 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:22px;line-height:1.1;letter-spacing:-.015em">twentyfour</h3>
+        <p style="margin:0;font-size:14px;line-height:1.5;text-wrap:pretty">How I took the 24 Hours identity from busy to calm: one accent, one serif and a brand that lives inside the product.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:end;padding-top:12px;border-top:1px solid var(--hair)">
+        <div style="font-size:12px;line-height:1.45;color:var(--muted)">Role<br><span style="color:var(--ink)">Brand &amp; product designer</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px"><a href="Case Study 24 Hours Branding.dc.html" style="display:inline-flex;align-items:center;min-height:36px;padding:0 14px;font-size:13px;font-weight:500;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;background:var(--inv);color:var(--invink)" style-hover="opacity:.88;color:var(--invink)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Open project →</a></div>
+      </div>
+    </div>
+  </article>
+  <article style="display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid var(--hair);border-radius:16px;background:var(--card)" style-hover="border-color:var(--ink)">
+    <img src="assets/plant/p1.jpg" alt="Rootopia logo over a plant-filled interior" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+    <div style="display:flex;flex-direction:column;gap:12px;justify-content:space-between">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:11px;padding:3px 9px;border:1px solid var(--hair);border-radius:999px">Logo · Palette · Social · Merch</span><span style="font-size:11px;padding:3px 9px;border-radius:999px;background:#5fbf8c;color:#1c1b18">Brand identity</span></div>
+        <h3 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:22px;line-height:1.1;letter-spacing:-.015em">Rootopia</h3>
+        <p style="margin:0;font-size:14px;line-height:1.5;text-wrap:pretty">A warm, earthy identity for a plant companion app: a sprout-and-roots mark, leaf pattern, social posts and merch.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:end;padding-top:12px;border-top:1px solid var(--hair)">
+        <div style="font-size:12px;line-height:1.45;color:var(--muted)">Role<br><span style="color:var(--ink)">Brand designer</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px"><a href="Case Study Rootopia Brand.dc.html" style="display:inline-flex;align-items:center;min-height:36px;padding:0 14px;font-size:13px;font-weight:500;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;background:var(--inv);color:var(--invink)" style-hover="opacity:.88;color:var(--invink)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Open project →</a></div>
+      </div>
+    </div>
+  </article>
+  <article style="display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid var(--hair);border-radius:16px;background:var(--card)" style-hover="border-color:var(--ink)">
+    <div role="img" aria-label="MCCIA social media results" style="width:100%;aspect-ratio:16/9;box-sizing:border-box;padding:24px;background:linear-gradient(135deg,#2a2620,#1f1d19);display:flex;flex-direction:column;justify-content:flex-end;gap:6px;border-radius:8px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"><span style="font-family:'Newsreader',serif;font-size:56px;line-height:1;color:oklch(0.8 0.13 75)">+1,418</span><span style="font-size:14px;color:#eceae4">new Instagram followers in January, from 22 posts</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;justify-content:space-between">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span style="font-size:11px;padding:3px 9px;border:1px solid var(--hair);border-radius:999px">Strategy · Content · Analytics</span><span style="font-size:11px;padding:3px 9px;border-radius:999px;background:oklch(0.8 0.13 75);color:#1c1b18">Social media</span></div>
+        <h3 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:22px;line-height:1.1;letter-spacing:-.015em">MCCIA</h3>
+        <p style="margin:0;font-size:14px;line-height:1.5;text-wrap:pretty">Led social media for a long-established chamber of commerce and turned Instagram into a growth channel: +1,418 followers in one month.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:end;padding-top:12px;border-top:1px solid var(--hair)">
+        <div style="font-size:12px;line-height:1.45;color:var(--muted)">Role<br><span style="color:var(--ink)">Social media head</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px"><a href="Case Study MCCIA.dc.html" style="display:inline-flex;align-items:center;min-height:36px;padding:0 14px;font-size:13px;font-weight:500;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;background:var(--inv);color:var(--invink)" style-hover="opacity:.88;color:var(--invink)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Open project →</a></div>
+      </div>
+    </div>
+  </article>
+  
+
+    
+    
+      
+    
+      
+    
+      
+    
+</div>
+</section>
+
+<section id="more" aria-labelledby="more-h" hidden="{{ true }}" style="display:none;padding:96px 0 40px;scroll-margin-top:60px">
+  <div style="max-width:1240px;margin:0 auto 40px;padding:0 28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Small projects</span>
+      <h2 id="more-h" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(36px,4.5vw,56px);letter-spacing:-.02em;line-height:1">Smaller things I’ve made.</h2>
+    </div>
+    <p style="margin:0;max-width:340px;font-size:14px;line-height:1.55;color:var(--muted)">Quick explorations and mobile concepts. Tap a phone to take a closer look.</p>
+  </div>
+  <div style="overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)">
+    <div style="display:flex;width:max-content;padding:12px 0 8px;animation:smallFlow 55s linear infinite" style-hover="animation-play-state:paused">
+      <ul style="margin:0;padding:0 28px 0 0;list-style:none;display:flex;gap:28px">
+    <sc-for list="{{ smallProjects }}" as="p" hint-placeholder-count="6">
+      <li style="flex:none;display:flex;flex-direction:column;gap:14px;width:200px">
+        <button type="button" onClick="{{ p.open }}" aria-label="Enlarge {{ p.name }}" style="padding:0;border:none;background:none;cursor:zoom-in;border-radius:32px;transition:transform .25s cubic-bezier(.2,0,0,1)" style-hover="transform:translateY(-6px)" style-active="transform:scale(.97)" style-focus="outline:2px solid var(--ink);outline-offset:4px">
+        <span style="display:block;width:200px;padding:6px;border-radius:32px;background:#141412;box-shadow:inset 0 0 0 1.5px #3a3a38,0 24px 48px -24px rgba(0,0,0,.8);box-sizing:border-box">
+          <span style="display:flex;align-items:center;justify-content:center;aspect-ratio:9/19.5;border-radius:26px;background:repeating-linear-gradient(135deg,rgba(236,234,228,.08) 0 1px,transparent 1px 11px),#1f1f1d;font:12px ui-monospace,Menlo,monospace;color:var(--muted);text-align:center;padding:16px;box-sizing:border-box">{{ p.screen }}</span>
+        </span>
+        </button>
+        <span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;font-weight:500">{{ p.name }}</span><span style="font-size:13px;line-height:1.45;color:var(--muted)">{{ p.desc }}</span></span>
+      </li>
+    </sc-for>
+      </ul>
+      <ul aria-hidden="true" style="margin:0;padding:0 28px 0 0;list-style:none;display:flex;gap:28px">
+    <sc-for list="{{ smallProjects }}" as="p" hint-placeholder-count="6">
+      <li style="flex:none;display:flex;flex-direction:column;gap:14px;width:200px">
+        <button type="button" onClick="{{ p.open }}" tabindex="-1" aria-label="Enlarge {{ p.name }}" style="padding:0;border:none;background:none;cursor:zoom-in;border-radius:32px;transition:transform .25s cubic-bezier(.2,0,0,1)" style-hover="transform:translateY(-6px)" style-active="transform:scale(.97)" style-focus="outline:2px solid var(--ink);outline-offset:4px">
+        <span style="display:block;width:200px;padding:6px;border-radius:32px;background:#141412;box-shadow:inset 0 0 0 1.5px #3a3a38,0 24px 48px -24px rgba(0,0,0,.8);box-sizing:border-box">
+          <span style="display:flex;align-items:center;justify-content:center;aspect-ratio:9/19.5;border-radius:26px;background:repeating-linear-gradient(135deg,rgba(236,234,228,.08) 0 1px,transparent 1px 11px),#1f1f1d;font:12px ui-monospace,Menlo,monospace;color:var(--muted);text-align:center;padding:16px;box-sizing:border-box">{{ p.screen }}</span>
+        </span>
+        </button>
+        <span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;font-weight:500">{{ p.name }}</span><span style="font-size:13px;line-height:1.45;color:var(--muted)">{{ p.desc }}</span></span>
+      </li>
+    </sc-for>
+      </ul>
+    </div>
+  </div>
+  <sc-if value="{{ smOpen }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="{{ sm.name }}" onClick="{{ smClose }}" style="position:fixed;inset:0;z-index:100;background:rgba(12,12,11,.88);display:flex;align-items:center;justify-content:center;padding:24px;animation:fadeIn .2s ease both">
+      <div onClick="{{ smStop }}" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:32px 48px;max-width:860px;animation:popIn .3s cubic-bezier(.2,0,0,1) both">
+        <span style="display:block;width:min(320px,70vw);padding:9px;border-radius:46px;background:#141412;box-shadow:inset 0 0 0 1.5px #3a3a38,0 24px 48px -24px rgba(0,0,0,.8);box-sizing:border-box">
+          <span style="display:flex;align-items:center;justify-content:center;aspect-ratio:9/19.5;border-radius:37px;background:repeating-linear-gradient(135deg,rgba(236,234,228,.08) 0 1px,transparent 1px 11px),#1f1f1d;font:12px ui-monospace,Menlo,monospace;color:var(--muted);text-align:center;padding:16px;box-sizing:border-box">{{ sm.screen }}</span>
+        </span>
+        <div style="flex:1 1 240px;max-width:320px;display:flex;flex-direction:column;gap:12px">
+          <h3 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-.015em">{{ sm.name }}</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:var(--muted)">{{ sm.desc }}</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button type="button" onClick="{{ smPrev }}" aria-label="Previous project" style="width:44px;height:44px;border-radius:50%;border:none;background:transparent;box-shadow:inset 0 0 0 1px var(--hair);color:var(--ink);cursor:pointer;font-size:16px" style-hover="background:var(--hair)" style-focus="outline:2px solid var(--ink);outline-offset:2px">←</button>
+            <button type="button" onClick="{{ smNext }}" aria-label="Next project" style="width:44px;height:44px;border-radius:50%;border:none;background:transparent;box-shadow:inset 0 0 0 1px var(--hair);color:var(--ink);cursor:pointer;font-size:16px" style-hover="background:var(--hair)" style-focus="outline:2px solid var(--ink);outline-offset:2px">→</button>
+            <button type="button" ref="{{ smCloseRef }}" onClick="{{ smClose }}" style="height:44px;padding:0 18px;border-radius:999px;border:none;background:var(--inv);color:var(--invink);font:inherit;font-size:14px;font-weight:500;cursor:pointer;margin-inline-start:auto" style-focus="outline:2px solid var(--ink);outline-offset:2px">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</section>
+
+
+
+<section id="contact" style="max-width:1240px;margin:0 auto;padding:110px 28px 80px;scroll-margin-top:60px">
+  <div style="border-top:1px solid var(--ink);padding-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 72px;align-items:end">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">05 — Contact</span>
+      <h2 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(40px,5.6vw,76px);letter-spacing:-.025em;line-height:1">Have a brand that needs a voice?<br>Let’s talk.</h2>
+      <span style="align-self:flex-start;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.78 0.12 150)"></span>Available for full-time and freelance work</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <a href="mailto:rajnandanihaldiya@gmail.com" style="font-family:'Newsreader',serif;font-size:clamp(24px,2.6vw,34px);border-bottom:1px solid var(--ink);padding-bottom:6px;align-self:flex-start">rajnandanihaldiya@gmail.com</a>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <a id="resume" href="assets/Rajnandani_Haldiya_GraphicDesigner_CV.pdf" target="_blank" rel="noopener noreferrer" style="font-size:14px;font-weight:500;padding:12px 20px;border-radius:999px;background:var(--inv);color:var(--invink)">View résumé (PDF)</a>
+        <a href="#contact" style="font-size:14px;padding:12px 18px;border-radius:999px;border:1px solid var(--hair)">LinkedIn</a>
+        <a href="#contact" style="font-size:14px;padding:12px 18px;border-radius:999px;border:1px solid var(--hair)">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="border-top:1px solid var(--hair)">
+  <div style="max-width:1240px;margin:0 auto;padding:22px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)">
+    <span>Rajnandani Haldiya</span>
+    <span>© 2026</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;'A'|'B'|'C'|'D'&quot;}}">
+const C = {
+  blue: 'oklch(0.76 0.15 245)', yellow: 'oklch(0.91 0.15 95)', pink: 'oklch(0.77 0.15 10)',
+  green: 'oklch(0.82 0.15 150)', violet: 'oklch(0.72 0.15 300)', coffee: 'oklch(0.7 0.17 45)'
+};
+const BG = 'transparent';
+const OBJ = {
+  laptop: { label: 'Ahhh, let me workkk', ax: 54.5, ay: 31, panel: 'projects', pos: ['54.2%', '3%', 'translateX(-50%)'] },
+  notebook: { label: 'Explore my workflow', ax: 26.8, ay: 87.5, below: true, panel: 'process', pos: ['28%', '3%', 'translateX(-30%)'] },
+  note1: { label: 'Take a look', ax: 69.5, ay: 33.5, panel: 'p1', pos: ['69.5%', '50%', 'translateX(-50%)'] },
+  note2: { label: 'Take a look', ax: 76.2, ay: 36.5, panel: 'p2', pos: ['76.2%', '53%', 'translateX(-60%)'] },
+  note3: { label: 'Take a look', ax: 83.1, ay: 43, panel: 'p3', pos: ['83%', '59%', 'translateX(-85%)'] },
+  painting: { label: 'I made this ✿', ax: 34.3, ay: 17, panel: 'art', pos: ['44%', '8%', 'none'] },
+  lamp: { label: 'Brighttt!', ax: 18, ay: 41.5 },
+  me: { label: 'Ahhh, let me workkk', ax: 54.5, ay: 31 },
+  cup: { label: 'I like it hott!', ax: 36.5, ay: 55.5, panel: 'cup', pos: ['18.4%', '3%', 'translateX(-20%)'] },
+  pens: { label: 'Counting pens…', ax: 72.3, ay: 60.5, panel: 'pens', pos: ['72.3%', '3%', 'translateX(-60%)'] },
+  headphones: { label: 'Now playing…', ax: 83.9, ay: 62, panel: 'headphones', pos: ['84%', '3%', 'translateX(-85%)'] }
+};
+const PRINCIPLES = ['Design is thinking made visual.', 'Do it unmotivated. Just do it.', 'What if it all works out?'];
+const PANELS = {
+  projects: { kicker: 'On my laptop', title: 'Selected work', items: [
+    { n: '01', label: 'TwentyFour', sub: 'Product Design · UX/UI', href: 'Case Study TwentyFour.dc.html', arrow: '→' },
+    { n: '02', label: 'Vestiaire Collective', sub: 'Sign-up UX redesign', href: 'Case Study Vestiaire.dc.html', arrow: '→' },
+    { n: '03', label: 'Swojas Enterprises', sub: 'Freelance website redesign', href: 'Case Study Swojas.dc.html', arrow: '→' },
+    { n: '04', label: 'DAEvol', sub: 'B2B website design', href: 'Case Study DAEvol.dc.html', arrow: '→' },
+    { n: '05', label: 'Project 05', sub: 'To add', href: 'Case Study Project 05.dc.html', arrow: '→' }] },
+  process: { kicker: 'In my notebook', title: 'How I work', items: [
+    'Understand the problem', 'Explore user needs and constraints', 'Define the direction', 'Design and prototype', 'Test assumptions and refine'
+  ].map((l, i) => ({ n: i + 1, label: l, sub: '', href: 'About.dc.html', arrow: '' })) },
+  p1: { kicker: 'Design principle', title: 'On my wall', quote: PRINCIPLES[0], items: [] },
+  p2: { kicker: 'Note to self', title: 'On my wall', quote: PRINCIPLES[1], items: [] },
+  p3: { kicker: 'Note to self', title: 'On my wall', quote: PRINCIPLES[2], items: [] },
+  cup: { kicker: 'Coffee', title: 'Fresh pot', quote: 'I like it hot. Like, steaming-while-I-push-pixels hot.', items: [] },
+  pens: { kicker: 'Pen stand', title: 'Inventory report', quote: 'Two pens, one pencil, zero that work on deadline day.', items: [] },
+  headphones: { kicker: 'Headphones', title: 'Now playing', quote: 'Lo-fi beats and the soothing sound of Figma autosaving.', items: [], link: { label: 'Tip: try the Music toggle, top-right ↗', href: '#top' } },
+  art: { kicker: 'The painting', title: 'My creative side', body: 'I paint when I’m not designing. It’s where I practise colour, composition and patience — the same things I bring to an interface.', items: [], link: { label: 'See the art gallery ↓', href: 'About.dc.html#art' } }
+};
+const TOOLS = [
+  { name: 'Figma', d: 'Interface design, components and prototypes.' },
+  { name: 'Framer', d: 'Responsive websites and interactions.' },
+  { name: 'Notion', d: 'Research notes and documentation.' }
+];
+
+class Component extends DCLogic {
+  state = { theme: 'dark', hover: null, open: null, tool: null, w: 1200, menu: false, music: false };
+  toggleMusic() {
+    const on = !this.state.music;
+    if (on) {
+      const A = window.AudioContext || window.webkitAudioContext; if (!A) return;
+      if (!this.ac) {
+        this.ac = new A(); this.gain = this.ac.createGain(); this.gain.gain.value = 0; this.gain.connect(this.ac.destination);
+        [196, 246.94, 293.66, 392].forEach((fr, i) => {
+          const o = this.ac.createOscillator(); o.type = 'sine'; o.frequency.value = fr;
+          const lfo = this.ac.createOscillator(); lfo.frequency.value = 0.07 + i * 0.03;
+          const lg = this.ac.createGain(); lg.gain.value = 0.5; const vg = this.ac.createGain(); vg.gain.value = 0.5;
+          lfo.connect(lg); lg.connect(vg.gain); o.connect(vg); vg.connect(this.gain); o.start(); lfo.start();
+        });
+      }
+      this.ac.resume();
+      this.gain.gain.setTargetAtTime(0.035, this.ac.currentTime, 0.8);
+    } else if (this.ac) {
+      this.gain.gain.setTargetAtTime(0, this.ac.currentTime, 0.3);
+    }
+    this.setState({ music: on });
+  }
+  componentDidMount() {
+    let t = null;
+    try { t = localStorage.getItem('rh-theme'); } catch (e) {}
+    t = 'dark';
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onKey = (e) => { if (e.key === 'Escape' && this.state.open) this.close(); };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('keydown', this.onKey);
+    this.setState({ theme: t, w: window.innerWidth });
+    this.startTyping();
+    const v = document.querySelector('video[src="assets/twentyfour-promo.mp4"]');
+    if (v) {
+      v.muted = true; v.defaultMuted = true;
+      const still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!still && 'IntersectionObserver' in window) {
+        this.vio = new IntersectionObserver(([en]) => {
+          if (en.isIntersecting) { const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); }
+          else v.pause();
+        }, { threshold: 0.5 });
+        this.vio.observe(v);
+      }
+    }
+  }
+  startTyping() {
+    const roles = ['Graphic designer', 'Visual designer', 'Brand designer'];
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { this.setState({ roleText: roles[0] }); return; }
+    let r = 0, i = 0, del = false;
+    const tick = () => {
+      const word = roles[r];
+      let wait = del ? 45 : 90;
+      if (!del) { i++; if (i === word.length) { del = true; wait = 1600; } }
+      else { i--; if (i === 0) { del = false; r = (r + 1) % roles.length; wait = 350; } }
+      this.setState({ roleText: word.slice(0, i) });
+      this.typeT = setTimeout(tick, wait);
+    };
+    this.typeT = setTimeout(tick, 700);
+  }
+  smCloseRef = React.createRef();
+  smallData = [1, 2, 3, 4, 5, 6].map(n => ({ name: 'Project ' + String(n).padStart(2, '0'), desc: 'One-line description to add.', screen: 'Mobile screen ' + String(n).padStart(2, '0') }));
+  openSmall(i, e) {
+    this.smOpener = e && e.currentTarget;
+    if (!this.smKey) { this.smKey = ev => { if (this.state.sm == null || this.state.sm < 0) return; if (ev.key === 'Escape') this.closeSmall(); if (ev.key === 'ArrowRight') this.stepSmall(1); if (ev.key === 'ArrowLeft') this.stepSmall(-1); }; window.addEventListener('keydown', this.smKey); }
+    this.setState({ sm: i }, () => this.smCloseRef.current && this.smCloseRef.current.focus());
+  }
+  closeSmall() { this.setState({ sm: -1 }, () => this.smOpener && this.smOpener.focus()); }
+  stepSmall(d) { const n = this.smallData.length; this.setState(s => ({ sm: (s.sm + d + n) % n })); }
+  componentWillUnmount() {
+    if (this.smKey) window.removeEventListener('keydown', this.smKey);
+    clearTimeout(this.typeT);
+    if (this.vio) this.vio.disconnect();
+    if (this.ac) this.ac.close();
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('keydown', this.onKey);
+  }
+  close() {
+    const el = this.trigger;
+    this.setState({ open: null });
+    if (el && el.focus) el.focus();
+  }
+  layoutVals() {
+    const names = { A: 'Split', B: 'Centered', C: 'Desk first', D: 'On the wall' };
+    const cur = this.state.layout || this.props.heroLayout || 'A';
+    const L = (cur === 'D' && this.state.w < 760) ? 'C' : cur;
+    return {
+      layA: L === 'A', layNotA: L !== 'A', layB: L === 'B', layC: L === 'C', layD: L === 'D',
+      deskMt: L === 'A' || L === 'B' ? '28px' : (L === 'D' ? 'clamp(40px,6vw,90px)' : '0'),
+      layOpts: Object.keys(names).map(id => ({ id, name: id + ' — ' + names[id], bg: id === cur ? 'var(--inv)' : 'transparent', fg: id === cur ? 'var(--invink)' : 'var(--ink)', pick: () => this.setState({ layout: id }) }))
+    };
+  }
+  goWorkflow() {
+    const el = document.getElementById('workflow');
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 20, behavior: 'smooth' });
+  }
+  activate(id, el) {
+    if (false) {
+      this.trigger = el;
+      this.setState(s => ({ open: s.open === id ? null : id, hover: id }));
+    } else {
+      this.setState(s => ({ hover: s.hover === id ? null : id, open: null }));
+    }
+  }
+  mk(id) {
+    return {
+      enter: () => this.setState({ hover: id }),
+      leave: () => this.setState(s => (s.hover === id ? { hover: null } : null)),
+      click: (e) => { e.stopPropagation(); if (id === 'notebook') return this.goWorkflow(); this.activate(id, e.currentTarget); },
+      key: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (id === 'notebook') return this.goWorkflow(); this.activate(id, e.currentTarget); } }
+    };
+  }
+  renderVals() {
+    const { theme, hover, open, tool, w, menu } = this.state;
+    const on = (id) => hover === id || open === id || (id === 'headphones' && this.state.music);
+    const f = (id, c) => (on(id) ? c : BG);
+    const o = {};
+    Object.keys(OBJ).forEach(id => { o[id] = this.mk(id); });
+    const dark = theme === 'dark';
+    o.laptop.f = f('laptop', C.blue); o.laptop.dot = dark ? 'transparent' : f('laptop', C.yellow);
+    o.notebook.f = f('notebook', C.yellow);
+    [1,2,3].forEach((n, i) => { o['note' + n].sway = on('note' + n) ? 'wiggle .5s ease-in-out infinite' : 'sway ' + (4 + i * .7) + 's ease-in-out ' + (-i * 1.3) + 's infinite'; });
+    o.note1.f = f('note1', C.yellow); o.note2.f = f('note2', C.pink); o.note3.f = f('note3', C.green);
+    o.painting.f = f('painting', C.blue); o.painting.f2 = f('painting', C.green); o.painting.f3 = f('painting', C.yellow);
+    o.lamp.f = on('lamp') ? 'oklch(0.98 0.1 95)' : (dark ? 'transparent' : BG);
+    o.lamp.cone = on('lamp') ? 1 : 0.32;
+    Object.keys(OBJ).forEach(id => { o[id].glow = on(id) ? 1 : 0; });
+    o.cup.f = f('cup', C.coffee);
+    o.pens.f = f('pens', C.blue); o.pens.f2 = f('pens', C.pink); o.pens.f3 = f('pens', C.green);
+    o.headphones.f = f('headphones', C.violet);
+
+    const h = hover && OBJ[hover];
+    const showLabel = !!(h && h.label && open !== hover && ['me','cup','laptop','painting','notebook'].includes(hover));
+    const lampLabel = 'Brighttt!';
+    o.me.glow = 0;
+    const irked = hover === 'me' || hover === 'laptop';
+    const cfg = open ? OBJ[open] : null;
+    const panel = open ? PANELS[cfg.panel] : { items: [] };
+    const wide = w >= 760;
+    return {
+      ...this.layoutVals(),
+      smallProjects: this.smallData.map((p, i) => ({ ...p, open: e => this.openSmall(i, e) })),
+      smOpen: this.state.sm >= 0, sm: this.state.sm >= 0 ? this.smallData[this.state.sm] : this.smallData[0],
+      smClose: () => this.closeSmall(), smStop: e => e.stopPropagation(), smPrev: () => this.stepSmall(-1), smNext: () => this.stepSmall(1), smCloseRef: this.smCloseRef,
+      roleText: this.state.roleText || '',
+      ly: ['desk','laptop','girl','lamp','notebook','painting','cup','p1','p2','p3','p4','holder','n1','n2','n3','headphones'].reduce((m, k) => { m[k] = 'assets/layers/' + (theme === 'dark' ? 'dark' : 'light') + '-' + k + '.png'; return m; }, {}),
+      paintFilter: theme === 'dark' ? 'brightness(1.45) contrast(1.05) saturate(1.1)' : 'brightness(1.85) contrast(1.05) saturate(1.15)',
+      muteOp: this.state.music ? 0 : 1, musicAria: this.state.music ? 'Pause music' : 'Play music',
+      theme, o, wide, deskImg: theme === 'dark' ? 'assets/ws-dark-v9.png' : 'assets/ws-light-v9.png', noteStroke: theme === 'dark' ? 'transparent' : '#1c1b18', blend: theme === 'dark' ? 'lighten' : 'darken', glowBlend: theme === 'dark' ? 'screen' : 'multiply', lampOutline: theme === 'dark' ? 0 : 1, musicOn: this.state.music, musicLabel: this.state.music ? 'Music on' : 'Music off', toggleMusic: () => this.toggleMusic(), narrow: !wide, showMenu: !wide && menu, menuOpen: menu,
+      menuLabel: menu ? 'Close' : 'Menu',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      themeLabel: theme === 'dark' ? 'Dark' : 'Light',
+      dotFill: theme === 'dark' ? 'transparent' : 'var(--invink)',
+      toggleTheme: () => {
+        const t = this.state.theme === 'dark' ? 'light' : 'dark';
+        try { localStorage.setItem('rh-theme', t); } catch (e) {}
+        this.setState({ theme: t });
+      },
+      showLabel, labelText: hover === 'lamp' ? lampLabel : (h ? h.label : ''),
+      labelLeft: h ? h.ax + '%' : '0', labelTop: h ? ((h.ay * 8.49 - 120) / 6.4) + '%' : '0',
+      zapName: irked ? 'zap' : 'none',
+      labelTf: h && h.below ? 'translate(-50%,0)' : 'translate(-50%,-100%)', 
+      panelOpen: !!open, panel,
+      panelLeft: cfg ? cfg.pos[0] : '0', panelTop: cfg ? cfg.pos[1] : '0', panelTf: cfg ? cfg.pos[2] : 'none',
+      closePanel: () => { if (this.state.open) this.close(); },
+      stop: (e) => e.stopPropagation(),
+      tools: TOOLS.map(t => ({
+        name: t.name, on: tool === t.name,
+        bg: tool === t.name ? C.yellow : 'transparent', fg: tool === t.name ? '#1c1b18' : 'var(--ink)',
+        pick: () => this.setState(s => ({ tool: s.tool === t.name ? null : t.name }))
+      })),
+      toolDetail: tool ? '— ' + TOOLS.find(t => t.name === tool).d : '',
+      projects: [
+        { n: '02', name: 'Swojas Enterprises', cat: 'Freelance · Website Redesign', status: 'Client project', href: 'Case Study Swojas.dc.html', desc: 'A real client project: turning business requirements into a website with clear visual hierarchy.', role: 'Website design, visual system', ph: 'Swojas — website screens' },
+        { n: '03', name: 'DAEvol', cat: 'Freelance · B2B Website Design', status: 'Client project', href: 'Case Study DAEvol.dc.html', desc: 'Translating a B2B offering into a website experience that explains itself.', role: 'Content structure, UI, build', ph: 'DAEvol — website screens' },
+        { n: '04', name: 'Project 04', cat: 'Category to add', status: 'Placeholder', href: 'Case Study Project 04.dc.html', desc: 'One-line description to add.', role: 'To add', ph: 'Project 04 — key visual' },
+        { n: '05', name: 'Project 05', cat: 'Category to add', status: 'Placeholder', href: 'Case Study Project 05.dc.html', desc: 'One-line description to add.', role: 'To add', ph: 'Project 05 — key visual' }
+      ],
+      experience: [
+        { role: 'Freelance UX/UI & Graphic Designer', org: 'Remote', dates: 'Apr 2026 — Present', desc: 'Websites and interfaces for small-business clients, including Swojas Enterprises and DAEvol.' },
+        { role: 'Digital Experience Designer', org: 'MCCIA, Pune', dates: 'Jan 2025 — Mar 2026', desc: 'Visual design and social media across web and campaign touchpoints.' },
+        { role: 'Graphic Design Intern', org: 'AgroStar, Pune', dates: 'Jul 2024 — Dec 2024', desc: 'Campaigns, social creatives and ads for farmers in Hindi, Marathi and Gujarati.' }
+      ],
+      skills: [
+        { k: 'Design', v: 'Figma, Illustrator, Photoshop' },
+        { k: 'Prototype / build', v: 'Framer, Webflow, Lottie, Jitter' },
+        { k: 'Video / motion', v: 'Premiere Pro' },
+        { k: 'Documentation', v: 'Notion' },
+        { k: 'Focus', v: 'Mobile app design, UX/UI, design systems, prototyping' }
+      ],
+      process: PANELS.process.items.map(i => ({ n: i.n, label: i.label })),
+      principles: [
+        { t: PRINCIPLES[0], c: C.yellow, r: '-2deg' }, { t: PRINCIPLES[1], c: C.pink, r: '1.5deg' }, { t: PRINCIPLES[2], c: C.green, r: '-1deg' }
+      ],
+      art: [
+        { t: 'artwork 01 — painting', ar: '4/5' }, { t: 'artwork 02', ar: '4/5' }, { t: 'artwork 03', ar: '4/5' }, { t: 'artwork 04', ar: '4/5' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

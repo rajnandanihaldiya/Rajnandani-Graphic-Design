@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="comet-cursor.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+[data-theme=dark]{--bg:#1a1a18;--ink:#eceae4;--muted:#a19e95;--hair:rgba(236,234,228,.16);--card:#21211e;--acc:oklch(0.8 0.13 75)}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit;opacity:.8}
+</style>
+</helmet>
+<div data-theme="dark" id="top" style="background:var(--bg);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:30;background:var(--bg);box-shadow:0 1px 0 var(--hair)">
+  <nav aria-label="Case study" style="max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair);transition:background-color .15s ease,transform .1s ease" style-hover="background:var(--hair);opacity:1" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">← All work</a>
+    <a href="Portfolio v2.dc.html" style="font-family:'Newsreader',serif;font-size:19px;min-height:40px;display:flex;align-items:center" style-focus="outline:2px solid var(--ink);outline-offset:3px;border-radius:6px">Rajnandani Haldiya</a>
+    <span aria-hidden="true" style="width:104px"></span>
+  </nav>
+</header>
+
+<main style="max-width:1160px;margin:0 auto;padding:40px 20px 96px;display:flex;flex-direction:column;gap:96px">
+
+<section aria-labelledby="m-title" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:16px;max-width:800px">
+    <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)"><span aria-hidden="true" style="width:56px;height:1px;background:var(--muted)"></span>MCCIA · Social media</div>
+    <h1 id="m-title" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(34px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;text-wrap:balance">From notice board to <em style="color:var(--acc)">growth channel</em></h1>
+    <p style="margin:0;font-size:18px;line-height:1.5;color:var(--muted);text-wrap:pretty;max-width:62ch">Leading social media for one of India’s oldest chambers of commerce, and shifting it from announcing what MCCIA does to showing how it helps businesses.</p>
+  </div>
+  <figure style="margin:0;display:flex;flex-direction:column;gap:10px;width:100%">
+    <video src="assets/mccia/main-reel.mp4" autoplay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsinline="{{ true }}" controls="{{ true }}" preload="metadata" aria-label="MCCIA milestone reel" style="width:100%;aspect-ratio:960/544;object-fit:cover;border-radius:20px;background:#000;display:block;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;box-shadow:0 1px 2px rgba(0,0,0,.3),0 20px 48px rgba(0,0,0,.35)"></video>
+    <figcaption style="font-size:13px;color:var(--muted)">Main reel · milestones campaign</figcaption>
+  </figure>
+  </div>
+  <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px">
+    <li style="padding:24px;border-radius:16px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);display:flex;flex-direction:column;gap:6px"><span style="font-family:'Newsreader',serif;font-size:44px;line-height:1;color:var(--acc);font-variant-numeric:tabular-nums">+1,418</span><span style="font-size:14px;line-height:1.45;color:var(--muted)">Instagram followers in January, the best month, from just 22 posts</span></li>
+    <li style="padding:24px;border-radius:16px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);display:flex;flex-direction:column;gap:6px"><span style="font-family:'Newsreader',serif;font-size:44px;line-height:1;color:var(--acc);font-variant-numeric:tabular-nums">94.7%</span><span style="font-size:14px;line-height:1.45;color:var(--muted)">of Instagram reach came from non-followers</span></li>
+    <li style="padding:24px;border-radius:16px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);display:flex;flex-direction:column;gap:6px"><span style="font-family:'Newsreader',serif;font-size:44px;line-height:1;color:var(--acc);font-variant-numeric:tabular-nums">1.4M</span><span style="font-size:14px;line-height:1.45;color:var(--muted)">Instagram profile reach, Nov–Jan</span></li>
+  </ul>
+  <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px 32px;padding-top:20px;border-top:1px solid var(--hair);font-size:15px">
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Role</dt><dd style="margin:0">Social media head</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Timeline</dt><dd style="margin:0">Nov 2025 – Jan 2026</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Channels</dt><dd style="margin:0">Instagram, LinkedIn, Facebook, X, YouTube</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Audience</dt><dd style="margin:0">MSMEs, startups, young professionals</dd></div>
+  </dl>
+</section>
+
+<section aria-labelledby="m-prob" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px 56px;align-items:start">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)">01 · The problem</span>
+    <h2 id="m-prob" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Trusted offline, invisible online</h2>
+  </div>
+  <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">Posts were formal announcements. They reached existing followers but rarely new people, and felt distant to the young founders MCCIA wanted to reach. The goal: grow organically, with no paid promotion.</p>
+</section>
+
+<section aria-labelledby="m-pillars" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)">02 · Strategy</span>
+    <h2 id="m-pillars" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Four content pillars</h2>
+  </div>
+  <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px">
+    <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4">
+      <li style="display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid var(--hair)">
+        <h3 style="margin:0;font-size:17px;font-weight:600">{{ p.t }}</h3>
+        <p style="margin:0;font-size:14px;line-height:1.5;color:var(--muted);text-wrap:pretty">{{ p.d }}</p>
+      </li>
+    </sc-for>
+  </ul>
+</section>
+
+<section aria-labelledby="m-growth" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:40px 56px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)">03 · Key insight</span>
+    <h2 id="m-growth" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Fewer, better posts grew the account fastest</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">January had a third of December’s posts but over four times the new followers. Relevance and storytelling beat volume.</p>
+  </div>
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px" aria-label="Instagram posts and new followers by month">
+    <sc-for list="{{ months }}" as="m" hint-placeholder-count="3">
+      <div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center">
+        <span style="font-size:14px;font-weight:600">{{ m.m }}</span>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;align-items:center;gap:10px"><span style="height:10px;border-radius:5px;background:var(--hair);width:{{ m.pw }}"></span><span style="font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap">{{ m.posts }} posts</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><span style="height:10px;border-radius:5px;background:var(--acc);width:{{ m.fw }}"></span><span style="font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap">+{{ m.fol }} followers</span></div>
+        </div>
+      </div>
+    </sc-for>
+    <figcaption style="font-size:12px;color:var(--muted)">Instagram, Nov 2025 – Jan 2026</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="m-top" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)">04 · What worked</span>
+    <h2 id="m-top" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Stories, local language and motion</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">The top Instagram post each month, by engagement rate.</p>
+  </div>
+  <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px">
+    <sc-for list="{{ tops }}" as="t" hint-placeholder-count="3">
+      <li style="display:flex;flex-direction:column;gap:8px;padding:20px;border-radius:16px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><h3 style="margin:0;font-size:17px;font-weight:600">{{ t.t }}</h3><span style="font-family:'Newsreader',serif;font-size:24px;color:var(--acc);font-variant-numeric:tabular-nums">{{ t.r }}</span></div>
+        <span style="font-size:13px;color:var(--muted)">{{ t.m }} · engagement rate</span>
+      </li>
+    </sc-for>
+  </ul>
+</section>
+
+<section aria-labelledby="m-all" style="display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)">05 · Across channels</span>
+    <h2 id="m-all" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em">Three months, four channels</h2>
+  </div>
+  <div style="overflow-x:auto">
+    <table style="width:100%;min-width:560px;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums">
+      <thead><tr style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:start"><th scope="col" style="text-align:start;font-weight:500;padding:10px 12px 10px 0">Channel</th><th scope="col" style="text-align:end;font-weight:500;padding:10px 12px">Followers (Jan)</th><th scope="col" style="text-align:end;font-weight:500;padding:10px 12px">New, Nov–Jan</th><th scope="col" style="text-align:end;font-weight:500;padding:10px 12px">Impressions, Nov–Jan</th><th scope="col" style="text-align:end;font-weight:500;padding:10px 0 10px 12px">Eng. rate (Jan)</th></tr></thead>
+      <tbody>
+        <sc-for list="{{ channels }}" as="c" hint-placeholder-count="4">
+          <tr style="border-top:1px solid var(--hair)"><th scope="row" style="text-align:start;font-weight:600;padding:14px 12px 14px 0">{{ c.n }}</th><td style="text-align:end;padding:14px 12px">{{ c.f }}</td><td style="text-align:end;padding:14px 12px;color:var(--acc)">+{{ c.nf }}</td><td style="text-align:end;padding:14px 12px">{{ c.i }}</td><td style="text-align:end;padding:14px 0 14px 12px">{{ c.e }}</td></tr>
+        </sc-for>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin:0;font-size:13px;color:var(--muted)">LinkedIn combines the MCCIA and CEWE pages. Figures from platform analytics, as of 31 Jan 2026.</p>
+</section>
+
+<section aria-labelledby="m-learn" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px 56px;align-items:start">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)">06 · What I learned</span>
+    <h2 id="m-learn" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Relevance beats volume</h2>
+  </div>
+  <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:16px">
+    <li style="display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:16px;line-height:1.55"><span style="color:var(--acc)">01</span><span><strong style="font-weight:600">Post less, say more.</strong> <span style="color:var(--muted)">The quietest month brought the most growth.</span></span></li>
+    <li style="display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:16px;line-height:1.55"><span style="color:var(--acc)">02</span><span><strong style="font-weight:600">Speak the audience’s language.</strong> <span style="color:var(--muted)">Hindi creatives connected with MSMEs where formal English didn’t.</span></span></li>
+    <li style="display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:16px;line-height:1.55"><span style="color:var(--acc)">03</span><span><strong style="font-weight:600">Show people, not notices.</strong> <span style="color:var(--muted)">Real startup stories outperformed announcements.</span></span></li>
+  </ul>
+</section>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--hair)">
+  <a href="#top" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair)" style-hover="background:var(--hair);opacity:1" style-focus="outline:2px solid var(--ink);outline-offset:2px">Back to top ↑</a>
+  <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 18px;font-size:14px;font-weight:600;border-radius:999px;background:var(--ink);color:var(--bg)" style-hover="opacity:.9;color:var(--bg)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:3px">See more work →</a>
+</div>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const M = [['Nov', 61, 261], ['Dec', 73, 318], ['Jan', 22, 1418]];
+    return {
+      pillars: [
+        { id: 'mc-p1', ph: 'Drop an educational reel cover', t: 'Educational reels', d: 'Short explainers on business ideas, schemes and events, made to be saved and shared.' },
+        { id: 'mc-p2', ph: 'Drop an event post', t: 'Event coverage', d: 'Highlights and behind-the-scenes moments that show MCCIA’s on-ground impact.' },
+        { id: 'mc-p3', ph: 'Drop a Hindi creative', t: 'Hindi regional content', d: 'Creatives in Hindi to feel closer to local MSMEs and entrepreneurs.' },
+        { id: 'mc-p4', ph: 'Drop a startup story post', t: 'Startup & MSME stories', d: 'Real businesses at the centre, so the brand earns trust through examples.' }
+      ],
+      months: M.map(([m, posts, fol]) => ({ m, posts, fol: fol.toLocaleString('en-IN'), pw: (posts / 73 * 100) + '%', fw: (fol / 1418 * 100) + '%' })),
+      tops: [
+        { id: 'mc-t1', ph: 'Drop the animated video still', t: 'Animated video', r: '7.09%', m: 'November' },
+        { id: 'mc-t2', ph: 'Drop the Hindi MSME creative', t: 'Hindi MSME creative', r: '7.48%', m: 'December' },
+        { id: 'mc-t3', ph: 'Drop the startup feature post', t: 'Startup feature', r: '9.52%', m: 'January' }
+      ],
+      channels: [
+        { n: 'LinkedIn', f: '25,087', nf: '1,959', i: '271,113', e: '11.2%' },
+        { n: 'Instagram', f: '5,928', nf: '1,997', i: '681,365', e: '3.49%' },
+        { n: 'Facebook', f: '7,646', nf: '560', i: '2,387,889', e: '3.69%' },
+        { n: 'X (Twitter)', f: '8,089', nf: '22', i: '16,196', e: '6.46%' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

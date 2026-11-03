@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="comet-cursor.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Newsreader:opsz,wght@6..72,400&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+[data-theme=dark]{--bg:#1a1a18;--ink:#eceae4;--muted:#a19e95;--hair:rgba(236,234,228,.16);--card:#21211e;--inv:#eceae4;--invink:#1a1a18}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit;opacity:.8}
+</style>
+</helmet>
+<div data-theme="dark" id="top" style="background:var(--bg);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:30;background:var(--bg);box-shadow:0 1px 0 var(--hair)">
+  <nav aria-label="Case study" style="max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair);transition:background-color .15s ease,transform .1s ease" style-hover="background:var(--hair);opacity:1" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">← All work</a>
+    <a href="Portfolio v2.dc.html" style="font-family:'Newsreader',serif;font-size:19px;min-height:40px;display:flex;align-items:center" style-focus="outline:2px solid var(--ink);outline-offset:3px;border-radius:6px">Rajnandani Haldiya</a>
+    <span aria-hidden="true" style="width:104px"></span>
+  </nav>
+</header>
+
+<main style="max-width:1160px;margin:0 auto;padding:40px 20px 80px;display:flex;flex-direction:column;gap:28px;color:#1c1b18">
+
+<section aria-labelledby="vc-title" style="border-radius:28px;overflow:hidden;padding:clamp(28px,5vw,64px);background-color:#f8e6d6;background-image:radial-gradient(120% 90% at 85% 40%,rgba(255,170,110,.55),transparent 60%),radial-gradient(80% 70% at 10% 90%,rgba(255,255,255,.6),transparent 70%),linear-gradient(rgba(28,27,24,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(28,27,24,.05) 1px,transparent 1px);background-size:auto,auto,36px 36px,36px 36px;display:flex;flex-wrap:wrap;gap:48px;align-items:center;justify-content:space-between">
+  <div style="flex:1 1 320px;max-width:440px;display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:12px;font-size:15px"><span aria-hidden="true" style="width:72px;height:1px;background:#1c1b18"></span>Vestiaire Collective</div>
+    <h1 id="vc-title" style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:clamp(38px,5vw,56px);line-height:1.08;letter-spacing:-.02em;text-wrap:balance">Reducing <strong style="font-weight:600">Friction</strong> in Mobile <strong style="font-weight:600">Sign-up</strong></h1>
+    <p style="margin:0;font-size:18px;line-height:1.5;text-wrap:pretty">A redesign of Vestiaire Collective’s account creation experience, refined after a design review.</p>
+    <dl style="margin:12px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:14px"><dt style="color:#5d5a53">Role</dt><dd style="margin:0">UX &amp; UI Designer</dd><dt style="color:#5d5a53">Industry</dt><dd style="margin:0">Luxury resale e-commerce</dd><dt style="color:#5d5a53">Duration</dt><dd style="margin:0">2 days + review iteration</dd><dt style="color:#5d5a53">Tools</dt><dd style="margin:0">Figma</dd></dl>
+  </div>
+  <div style="flex:1 1 560px;display:flex;flex-direction:column;gap:20px;align-items:center">
+    <div aria-hidden="true" style="display:flex;align-items:center;gap:12px;font-size:16px;font-weight:600"><span style="padding:6px 16px;border-radius:8px;background:#dcdad6">Before</span><span style="width:120px;height:1px;background:#8a7a6c"></span><span style="padding:6px 16px;border-radius:8px;background:#d9431a;color:#fff">After</span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:center;align-items:flex-start">
+      <div style="width:260px;max-width:100%;padding:8px;border-radius:44px;background:#151514;box-shadow:0 30px 60px -30px rgba(60,30,10,.45),inset 0 0 0 1.5px #3a3a38;box-sizing:border-box"><img src="assets/vestiaire/before.png" alt="Original Vestiaire Collective sign-up screen: three fields, static password rules, marketing and legal toggles, and three social buttons" style="display:block;width:100%;height:auto;border-radius:36px"></div>
+      <dc-import name="Vestiaire Signup" hint-size="340px,720px"></dc-import>
+    </div>
+    <p style="margin:0;font-size:13px;color:#5d5a53">The redesigned screen is live: type a password to see validation respond.</p>
+  </div>
+</section>
+
+<section aria-labelledby="why-h" style="border-radius:28px;padding:clamp(28px,5vw,64px);background-color:#f7f4ee;background-image:linear-gradient(rgba(28,27,24,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(28,27,24,.05) 1px,transparent 1px);background-size:36px 36px;display:flex;flex-direction:column;gap:20px">
+  <h2 id="why-h" style="margin:0;font-family:'Lora',serif;font-weight:500;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.01em">Why I chose this screen</h2>
+  <p style="margin:0;max-width:68ch;font-size:17px;line-height:1.65;text-wrap:pretty">The screen looked clean but asked a lot at once, at the first commitment someone makes to a marketplace.</p>
+  <p style="margin:0;max-width:60ch;font-family:'Lora',serif;font-style:italic;font-size:clamp(20px,2.2vw,24px);line-height:1.4;color:#c23a12;text-wrap:pretty">My goal wasn’t to redesign the interface. It was to <strong style="font-weight:600">remove the friction</strong> standing between the user and the marketplace.</p>
+</section>
+
+<section aria-labelledby="problem-h" style="border-radius:28px;padding:clamp(28px,5vw,64px);background-color:#f7f4ee;background-image:linear-gradient(rgba(28,27,24,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(28,27,24,.05) 1px,transparent 1px);background-size:36px 36px;display:flex;flex-direction:column;gap:20px">
+  <h2 id="problem-h" style="margin:0;font-family:'Lora',serif;font-weight:500;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.01em">The problem</h2>
+  <p style="margin:0;max-width:68ch;font-size:17px;line-height:1.65;text-wrap:pretty">Five things compete for attention before the one task: creating an account.</p>
+  <ul style="margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px"><li style="font-size:14px;padding:8px 14px;border-radius:999px;background:#fffdf9;box-shadow:inset 0 0 0 1px rgba(28,27,24,.14)">Multiple form fields</li><li style="font-size:14px;padding:8px 14px;border-radius:999px;background:#fffdf9;box-shadow:inset 0 0 0 1px rgba(28,27,24,.14)">Password requirements</li><li style="font-size:14px;padding:8px 14px;border-radius:999px;background:#fffdf9;box-shadow:inset 0 0 0 1px rgba(28,27,24,.14)">Marketing consent</li><li style="font-size:14px;padding:8px 14px;border-radius:999px;background:#fffdf9;box-shadow:inset 0 0 0 1px rgba(28,27,24,.14)">Legal agreement</li><li style="font-size:14px;padding:8px 14px;border-radius:999px;background:#fffdf9;box-shadow:inset 0 0 0 1px rgba(28,27,24,.14)">Three social sign-ins</li></ul>
+  <p style="margin:0;max-width:62ch;font-size:18px;line-height:1.5;color:#c23a12;text-wrap:pretty">These competing elements <strong style="font-weight:600">may increase the cognitive effort</strong> required to complete sign-up.</p>
+  
+</section>
+
+<section aria-labelledby="pain-h" style="border-radius:28px;padding:clamp(28px,5vw,64px);background-color:#f7f4ee;background-image:linear-gradient(rgba(28,27,24,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(28,27,24,.05) 1px,transparent 1px);background-size:36px 36px;display:flex;flex-direction:column;gap:24px">
+  <h2 id="pain-h" style="margin:0;font-family:'Lora',serif;font-weight:500;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.01em">Pain points</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px 48px">
+    <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px">
+      <li style="display:flex;flex-direction:column;gap:4px"><span style="align-self:flex-start;font-size:16px;line-height:1.55;font-weight:600;font-style:italic;background:#f6d5cc;padding:2px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone">Multiple secondary actions compete with the primary task.</span></li>
+      <li style="display:flex;flex-direction:column;gap:4px"><span style="align-self:flex-start;font-size:16px;line-height:1.55;font-weight:600;font-style:italic;background:#f6d5cc;padding:2px 6px">Password rules take up space and stay static as you type.</span></li>
+      <li style="display:flex;flex-direction:column;gap:4px"><span style="align-self:flex-start;font-size:16px;line-height:1.55;font-weight:600;font-style:italic;background:#f6d5cc;padding:2px 6px">Marketing consent appears before the user has experienced any value.</span></li>
+      <li style="display:flex;flex-direction:column;gap:4px"><span style="align-self:flex-start;font-size:16px;line-height:1.55;font-weight:600;font-style:italic;background:#f6d5cc;padding:2px 6px">Legal copy adds reading effort to a simple task.</span></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:18px;padding:24px;border-radius:20px;background:#fffdf9;box-shadow:0 1px 2px rgba(28,27,24,.06),0 8px 24px -12px rgba(28,27,24,.12)">
+      <span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5d5a53">Raised in design review</span>
+      <ol start="5" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;font-size:15px;line-height:1.5">
+        <li><strong style="font-weight:600">The heading repeated onboarding.</strong></li>
+        <li><strong style="font-weight:600">Fields and social buttons felt cramped.</strong></li>
+        <li><strong style="font-weight:600">One checkbox mixed terms and marketing.</strong></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="final-h" style="border-radius:28px;padding:clamp(28px,5vw,64px);background-color:#f7f4ee;background-image:linear-gradient(rgba(28,27,24,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(28,27,24,.05) 1px,transparent 1px);background-size:36px 36px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:68ch">
+    <h2 id="final-h" style="margin:0;font-family:'Lora',serif;font-weight:500;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.01em;text-transform:uppercase">Final redesign</h2>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5d5a53">Design decisions</span>
+    <div style="display:flex;flex-direction:column;border-bottom:1px solid rgba(28,27,24,.14)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 32px;padding:14px 0;border-top:1px solid rgba(28,27,24,.14);font-size:15px;line-height:1.5"><span style="color:#c23a12">Competing secondary actions</span><span>Strengthen the hierarchy around one primary button.</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 32px;padding:14px 0;border-top:1px solid rgba(28,27,24,.14);font-size:15px;line-height:1.5"><span style="color:#c23a12">Password rules demand attention</span><span>Compact guidance that responds as you type.</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 32px;padding:14px 0;border-top:1px solid rgba(28,27,24,.14);font-size:15px;line-height:1.5"><span style="color:#c23a12">Marketing consent interrupts the task</span><span>A separate, optional choice, unticked by default.</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 32px;padding:14px 0;border-top:1px solid rgba(28,27,24,.14);font-size:15px;line-height:1.5"><span style="color:#c23a12">Legal copy adds reading effort</span><span>One clear statement with accessible links to each document.</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 32px;padding:14px 0;border-top:1px solid rgba(28,27,24,.14);font-size:15px;line-height:1.5"><span style="color:#c23a12">Cramped fields and social buttons</span><span>48px controls, 16px text and padding, 12px spacing.</span></div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:40px 56px;align-items:flex-start">
+    <figure style="flex:0 1 280px;margin:0;display:flex;flex-direction:column;gap:12px">
+      <div style="padding:8px;border-radius:44px;background:#151514;box-shadow:0 30px 60px -30px rgba(60,30,10,.45),inset 0 0 0 1.5px #3a3a38"><img src="assets/vestiaire/round1.png" alt="First redesign, before review: Join Vestiaire Collective heading, light fields, a strength bar, one terms checkbox, and short social buttons" loading="lazy" style="display:block;width:100%;height:auto;border-radius:36px"></div>
+      <figcaption style="font-size:13px;line-height:1.5;color:#5d5a53">Round 1, the version that went to review.</figcaption>
+    </figure>
+    <div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5d5a53">What changed after review</span>
+      <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column">
+        <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(28,27,24,.14)"><span style="font-family:'Lora',serif;font-size:20px;color:#1f7a45;min-width:1.2em">1</span><div style="display:flex;flex-direction:column;gap:4px"><strong style="font-size:16px;font-weight:600">A task-first heading</strong><span style="font-size:15px;line-height:1.55;color:#5d5a53;text-wrap:pretty">“Create your account” says what to do.</span></div></li>
+        <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(28,27,24,.14)"><span style="font-family:'Lora',serif;font-size:20px;color:#1f7a45;min-width:1.2em">2</span><div style="display:flex;flex-direction:column;gap:4px"><strong style="font-size:16px;font-weight:600">Fields sized for thumbs</strong><span style="font-size:15px;line-height:1.55;color:#5d5a53;text-wrap:pretty">48px fields, 16px text, 44px show-password target.</span></div></li>
+        <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(28,27,24,.14)"><span style="font-family:'Lora',serif;font-size:20px;color:#1f7a45;min-width:1.2em">3</span><div style="display:flex;flex-direction:column;gap:4px"><strong style="font-size:16px;font-weight:600">Password rules that respond</strong><span style="font-size:15px;line-height:1.55;color:#5d5a53;text-wrap:pretty">Rules turn green as they’re met; unmet stays neutral, not red.</span></div></li>
+        <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(28,27,24,.14)"><span style="font-family:'Lora',serif;font-size:20px;color:#1f7a45;min-width:1.2em">4</span><div style="display:flex;flex-direction:column;gap:4px"><strong style="font-size:16px;font-weight:600">Consent, separated</strong><span style="font-size:15px;line-height:1.55;color:#5d5a53;text-wrap:pretty">One legal line with links; marketing is a separate, optional box.</span></div></li>
+        <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid rgba(28,27,24,.14)"><span style="font-family:'Lora',serif;font-size:20px;color:#1f7a45;min-width:1.2em">5</span><div style="display:flex;flex-direction:column;gap:4px"><strong style="font-size:16px;font-weight:600">Balanced social buttons</strong><span style="font-size:15px;line-height:1.55;color:#5d5a53;text-wrap:pretty">Google and Apple at 48px, fully tappable.</span></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <span style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5d5a53">Password states</span>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px">
+      <div style="display:flex;flex-direction:column;gap:10px;padding:20px;border-radius:18px;background:#fff;box-shadow:0 1px 2px rgba(28,27,24,.06),0 8px 24px -12px rgba(28,27,24,.12)">
+        <span style="font-size:13px;font-weight:600">1 · Default</span>
+        <div style="height:48px;padding:0 16px;display:flex;align-items:center;border-radius:10px;background:#f5f5f4;box-shadow:inset 0 0 0 1px #dcdcda;font-size:15px;color:#8a8a8a">Create a password</div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;font-size:12px;color:#5c5c5c"><li style="display:flex;gap:8px;align-items:center"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #a3a3a0"></span>At least 8 characters</li><li style="display:flex;gap:8px;align-items:center"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #a3a3a0"></span>At least 1 number</li><li style="display:flex;gap:8px;align-items:center"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #a3a3a0"></span>Both upper and lower case letters</li></ul>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:20px;border-radius:18px;background:#fff;box-shadow:0 1px 2px rgba(28,27,24,.06),0 8px 24px -12px rgba(28,27,24,.12)">
+        <span style="font-size:13px;font-weight:600">2 · In progress</span>
+        <div style="height:48px;padding:0 16px;display:flex;align-items:center;border-radius:10px;background:#f5f5f4;box-shadow:inset 0 0 0 2px #141414;font-size:15px;color:#141414">rajnandani</div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;font-size:12px;color:#5c5c5c"><li style="display:flex;gap:8px;align-items:center;color:#1d6b3f"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;background:#1f7a45;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>At least 8 characters</li><li style="display:flex;gap:8px;align-items:center"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #a3a3a0"></span>At least 1 number</li><li style="display:flex;gap:8px;align-items:center"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #a3a3a0"></span>Both upper and lower case letters</li></ul>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:20px;border-radius:18px;background:#fff;box-shadow:0 1px 2px rgba(28,27,24,.06),0 8px 24px -12px rgba(28,27,24,.12)">
+        <span style="font-size:13px;font-weight:600">3 · Valid</span>
+        <div style="height:48px;padding:0 16px;display:flex;align-items:center;border-radius:10px;background:#f5f5f4;box-shadow:inset 0 0 0 1px #1f7a45;font-size:15px;color:#141414">Rajnandani1</div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;font-size:12px;color:#1d6b3f"><li style="display:flex;gap:8px;align-items:center"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;background:#1f7a45;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>At least 8 characters</li><li style="display:flex;gap:8px;align-items:center"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;background:#1f7a45;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>At least 1 number</li><li style="display:flex;gap:8px;align-items:center"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;background:#1f7a45;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>Both upper and lower case letters</li></ul>
+      </div>
+    </div>
+    
+  </div>
+
+  <p style="margin: 0; max-width: 40ch; font-family: 'Lora',serif; font-style: italic; font-size: clamp(20px,2.2vw,24px); line-height: 1.4; color: #c23a12; width: 505px; height: 90px">“I removed competing actions so users could focus on one clear next step, then made sure each step was easy to reach.”</p>
+</section>
+
+<section aria-labelledby="ba-h" style="border-radius:28px;padding:clamp(28px,5vw,64px);background-color:#f7f4ee;background-image:linear-gradient(rgba(28,27,24,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(28,27,24,.05) 1px,transparent 1px);background-size:36px 36px;display:flex;flex-direction:column;gap:32px">
+  <h2 id="ba-h" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Before and after</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:48px 40px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:center">
+      <span aria-hidden="true" style="font-family:'Lora',serif;font-size:clamp(56px,7vw,84px);line-height:.9;color:#e4532a">Before</span>
+      <div style="display:flex;flex-wrap:wrap-reverse;gap:20px;justify-content:center;align-items:center">
+        <ol style="flex:1 1 160px;max-width:200px;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;font-family:'Lora',serif;font-size:15px;line-height:1.35;color:#c23a12">
+          <li>1. Too much information in one section</li><li>2. Password rules take up space</li><li>3. Marketing opt-in early in the flow</li><li>4. Heavy legal copy</li><li>5. Three social options, tightly packed</li>
+        </ol>
+        <div style="flex:0 1 260px;padding:8px;border-radius:44px;background:#151514;box-shadow:0 30px 60px -30px rgba(60,30,10,.45),inset 0 0 0 1.5px #3a3a38"><img src="assets/vestiaire/before.png" alt="Original sign-up screen" loading="lazy" style="display:block;width:100%;height:auto;border-radius:36px"></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:center">
+      <span aria-hidden="true" style="font-family:'Lora',serif;font-size:clamp(56px,7vw,84px);line-height:.9;color:#1f7a45">After</span>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;align-items:center">
+        <dc-import name="Vestiaire Signup" initial-password="rajnandani" hint-size="340px,720px"></dc-import>
+        <ol style="flex:1 1 160px;max-width:200px;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;font-family:'Lora',serif;font-size:15px;line-height:1.35;color:#1d6b3f">
+          <li>1. Task-first heading, fewer fields</li><li>2. Live password feedback</li><li>3. Marketing optional and separate</li><li>4. One plain legal statement</li><li>5. Two 48px social buttons</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="learn-h" style="border-radius:28px;padding:clamp(28px,5vw,64px);background-color:#f7f4ee;background-image:linear-gradient(rgba(28,27,24,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(28,27,24,.05) 1px,transparent 1px);background-size:36px 36px;display:flex;flex-direction:column;gap:20px">
+  <h2 id="learn-h" style="margin:0;font-family:'Lora',serif;font-weight:500;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.01em">What I learned</h2>
+  
+  <p style="margin:0;max-width:44ch;padding-left:16px;border-left:2px solid #c23a12;font-family:'Lora',serif;font-style:italic;font-size:clamp(20px,2.2vw,24px);line-height:1.4;color:#c23a12">Good UX isn’t about adding more. It’s about removing unnecessary effort.</p>
+  <p style="margin:0;max-width:68ch;font-size:17px;line-height:1.65;text-wrap:pretty">The review sharpened it: <strong style="font-weight:600">reducing friction also means making every step easy to reach and understand.</strong></p>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:16px;color:var(--ink);margin-top:24px">
+  <a href="Case Study Swojas.dc.html" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;padding:32px;border-radius:20px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);transition:box-shadow .2s ease" style-hover="box-shadow:inset 0 0 0 1px var(--ink);opacity:1" style-focus="outline:2px solid var(--ink);outline-offset:3px">
+    <div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Next project · 03</span><span style="font-family:'Newsreader',serif;font-size:clamp(32px,4vw,52px);letter-spacing:-.02em">Swojas Enterprises</span></div>
+    <span style="font-size:14px;font-weight:500;padding:12px 20px;border-radius:999px;background:var(--inv);color:var(--invink)">Next →</span>
+  </a>
+  <a href="Portfolio v2.dc.html#work" style="align-self:flex-start;font-size:14px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:from-font;min-height:40px;display:flex;align-items:center" style-focus="outline:2px solid var(--ink);outline-offset:2px">Back to all projects</a>
+</section>
+</main>
+<footer style="border-top:1px solid var(--hair)">
+  <div style="max-width:1240px;margin:0 auto;padding:22px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)"><span>Rajnandani Haldiya</span><span>© 2026</span><a href="#top">Back to top ↑</a></div>
+</footer>
+</div>
+</x-dc>
+</body>
+</html>

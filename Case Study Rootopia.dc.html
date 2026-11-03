@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="comet-cursor.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;family=Newsreader:opsz,wght@6..72,400&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+[data-theme=dark]{--bg:#1a1a18;--ink:#eceae4;--muted:#a19e95;--hair:rgba(236,234,228,.16);--card:#21211e;--leaf:oklch(0.78 0.11 150)}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit;opacity:.8}
+</style>
+</helmet>
+<div data-theme="dark" id="top" style="background:var(--bg);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:30;background:var(--bg);box-shadow:0 1px 0 var(--hair)">
+  <nav aria-label="Case study" style="max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair);transition:background-color .15s ease,transform .1s ease" style-hover="background:var(--hair);opacity:1" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">← All work</a>
+    <a href="Portfolio v2.dc.html" style="font-family:'Newsreader',serif;font-size:19px;min-height:40px;display:flex;align-items:center" style-focus="outline:2px solid var(--ink);outline-offset:3px;border-radius:6px">Rajnandani Haldiya</a>
+    <span aria-hidden="true" style="width:104px"></span>
+  </nav>
+</header>
+
+<main style="max-width:1160px;margin:0 auto;padding:40px 20px 96px;display:flex;flex-direction:column;gap:104px">
+
+<section aria-labelledby="rt-title" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+    <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)"><span aria-hidden="true" style="width:56px;height:1px;background:var(--muted)"></span>Rootopia · Plant care &amp; commerce app</div>
+    <h1 id="rt-title" style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:clamp(34px,4.6vw,52px);line-height:1.1;letter-spacing:-.02em;text-wrap:balance">The real problem isn’t buying plants. It’s <em style="color:var(--leaf)">keeping them alive.</em></h1>
+    <p style="margin:0;font-size:18px;line-height:1.5;color:var(--muted);text-wrap:pretty;max-width:62ch">An all-in-one plant companion: buy plants, get care guidance for your climate, and never miss a watering.</p>
+  </div>
+  <img src="assets/rootopia-hero.jpg" alt="Rootopia home and Pending Care screens on two phones over a leafy background" style="width:100%;aspect-ratio:1440/700;object-fit:cover;border-radius:24px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+  <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px 32px;padding-top:20px;border-top:1px solid var(--hair);font-size:15px">
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Role</dt><dd style="margin:0">UX/UI Designer</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Platform</dt><dd style="margin:0">Mobile app</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Duration</dt><dd style="margin:0">3 months</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Research</dt><dd style="margin:0">Survey · 102 participants</dd></div>
+  </dl>
+</section>
+
+<section aria-labelledby="rt-problem" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:40px 64px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">01 · The problem</span>
+    <h2 id="rt-problem" style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">People are too busy for nurseries, and the plants they do buy don’t survive.</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">Bad advice, fading motivation and guidance that ignores the local climate. Three reasons keep coming up:</p>
+    <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px">
+      <li style="display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:16px;line-height:1.5"><span style="color:var(--leaf);font-variant-numeric:tabular-nums">01</span><span><strong style="font-weight:600">Information overload.</strong> <span style="color:var(--muted)">Conflicting care tips confuse people and harm plants.</span></span></li>
+      <li style="display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:16px;line-height:1.5"><span style="color:var(--leaf);font-variant-numeric:tabular-nums">02</span><span><strong style="font-weight:600">Low retention.</strong> <span style="color:var(--muted)">Excitement fades fast after the first purchase.</span></span></li>
+      <li style="display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:16px;line-height:1.5"><span style="color:var(--leaf);font-variant-numeric:tabular-nums">03</span><span><strong style="font-weight:600">Generic guidance.</strong> <span style="color:var(--muted)">One-size-fits-all advice doesn’t work across climates.</span></span></li>
+    </ol>
+  </div>
+  <img src="assets/rootopia-plant.jpg" alt="" style="width:100%;max-width:380px;justify-self:center;aspect-ratio:340/475;object-fit:cover;border-radius:20px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+</section>
+
+<section aria-labelledby="rt-research" style="display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">02 · How it started</span>
+    <h2 id="rt-research" style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em">What 102 people told us</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">An online survey to understand who buys plants, why, and where care breaks down.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px 48px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h3 style="margin:0;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Who they are</h3>
+      <div style="display:flex;gap:24px;flex-wrap:wrap"><div><div style="font-family:'Lora',serif;font-size:28px;font-variant-numeric:tabular-nums">94%</div><div style="font-size:13px;color:var(--muted)">aged 18–30</div></div><div><div style="font-family:'Lora',serif;font-size:28px;font-variant-numeric:tabular-nums">62%</div><div style="font-size:13px;color:var(--muted)">beginners</div></div></div>
+      <p style="margin:0;font-size:14px;line-height:1.5;color:var(--muted)">Motivation: hobby 61%, aesthetic 45%, air purification 38%.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h3 style="margin:0;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Top care challenges</h3>
+      <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="display:flex;flex-direction:column;gap:6px;font-size:14px"><div style="display:flex;justify-content:space-between"><span>Struggling with pests</span><span style="font-variant-numeric:tabular-nums">55%</span></div><div style="height:4px;border-radius:2px;background:var(--hair)"><div style="width:55%;height:100%;border-radius:2px;background:var(--leaf)"></div></div></li>
+        <li style="display:flex;flex-direction:column;gap:6px;font-size:14px"><div style="display:flex;justify-content:space-between"><span>Inconsistent watering</span><span style="font-variant-numeric:tabular-nums">49%</span></div><div style="height:4px;border-radius:2px;background:var(--hair)"><div style="width:49%;height:100%;border-radius:2px;background:var(--leaf)"></div></div></li>
+        <li style="display:flex;flex-direction:column;gap:6px;font-size:14px"><div style="display:flex;justify-content:space-between"><span>Difficulty finding plants</span><span style="font-variant-numeric:tabular-nums">37%</span></div><div style="height:4px;border-radius:2px;background:var(--hair)"><div style="width:37%;height:100%;border-radius:2px;background:var(--leaf)"></div></div></li>
+      </ul>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px">
+    <div style="padding:24px;border-radius:16px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);display:flex;flex-direction:column;gap:8px"><span style="font-family:'Lora',serif;font-size:28px;color:var(--leaf)">64%</span><h3 style="margin:0;font-size:16px;font-weight:600">Quality over price</h3><p style="margin:0;font-size:14px;line-height:1.5;color:var(--muted)">Will pay more for guaranteed plant health and vetted sourcing.</p></div>
+    <div style="padding:24px;border-radius:16px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);display:flex;flex-direction:column;gap:8px"><span style="font-family:'Lora',serif;font-size:28px;color:var(--leaf)">62%</span><h3 style="margin:0;font-size:16px;font-weight:600">Visuals + info</h3><p style="margin:0;font-size:14px;line-height:1.5;color:var(--muted)">Want rich imagery alongside detailed care instructions.</p></div>
+    <div style="padding:24px;border-radius:16px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);display:flex;flex-direction:column;gap:8px"><span style="font-family:'Lora',serif;font-size:28px;color:var(--leaf)">52%</span><h3 style="margin:0;font-size:16px;font-weight:600">Want to discover</h3><p style="margin:0;font-size:14px;line-height:1.5;color:var(--muted)">Asked for a matchmaker that suggests plants for their space.</p></div>
+    <div style="padding:24px;border-radius:16px;background:var(--ink);color:var(--bg);display:flex;flex-direction:column;gap:8px"><span style="font-family:'Lora',serif;font-size:28px">82%</span><h3 style="margin:0;font-size:16px;font-weight:600">Open to AR</h3><p style="margin:0;font-size:14px;line-height:1.5;opacity:.75">Keen to preview a plant’s size and placement in their own room.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="rt-solution" style="display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">03 · The solution</span>
+    <h2 id="rt-solution" style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em">One app. The full journey.</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">Buying, learning and caring in one place, so nobody leaves the app to figure out what to do next.</p>
+  </div>
+  <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:32px 40px">
+    <li style="display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid var(--hair)"><h3 style="margin:0;font-size:18px;font-weight:600">Buy online</h3><p style="margin:0;font-size:15px;line-height:1.5;color:var(--muted)">Order to your door, filtered by space, climate and care level.</p><span style="font-size:13px;color:var(--leaf)">→ Difficulty finding plants</span></li>
+    <li style="display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid var(--hair)"><h3 style="margin:0;font-size:18px;font-weight:600">Smart reminders</h3><p style="margin:0;font-size:15px;line-height:1.5;color:var(--muted)">Watering alerts set at purchase, adjustable anytime.</p><span style="font-size:13px;color:var(--leaf)">→ Inconsistent watering</span></li>
+    <li style="display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid var(--hair)"><h3 style="margin:0;font-size:18px;font-weight:600">Plant info</h3><p style="margin:0;font-size:15px;line-height:1.5;color:var(--muted)">Water, light, space and climate tips on every plant.</p><span style="font-size:13px;color:var(--leaf)">→ Information overload</span></li>
+    <li style="display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid var(--hair)"><h3 style="margin:0;font-size:18px;font-weight:600">Plant scan</h3><p style="margin:0;font-size:15px;line-height:1.5;color:var(--muted)">Identify any plant or diagnose a problem with the camera.</p><span style="font-size:13px;color:var(--leaf)">→ Struggling with pests</span></li>
+  </ul>
+</section>
+
+<section aria-labelledby="rt-flow" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">04 · First impression</span>
+    <h2 id="rt-flow" style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em">Onboarding that sets the tone</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">Four screens, one idea each, ending at a single choice: log in or create an account.</p>
+  </div>
+  <img src="assets/rootopia-onboard.jpg" alt="Onboarding: splash, Welcome to Rootopia, Seamless plants shopping, and login or create account" style="width:100%;border-radius:20px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+</section>
+
+<section aria-labelledby="rt-ia" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px 56px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">05 · Structure</span>
+    <h2 id="rt-ia" style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em">Five tabs, one per job</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">Home, Community, Cart, My Garden and Profile. The scanner sits in the centre of the tab bar because it’s the fastest route to help.</p>
+  </div>
+  <img src="assets/rootopia-ia.jpg" alt="Information architecture: Rootopia splits into Home, Community, Cart, My Garden and Profile, each with sub-pages" style="width:100%;border-radius:20px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block;grid-column:1/-1">
+</section>
+
+<section aria-labelledby="rt-screens" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)">06 · Key screens</span>
+    <h2 id="rt-screens" style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em">Main screens and the thinking behind them</h2>
+  </div>
+  <div role="region" aria-label="Key screens, scroll sideways" tabindex="0" style="display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin:0 -20px;padding-inline:20px;scroll-padding-inline:20px" style-focus="outline:2px solid var(--ink);outline-offset:2px">
+    <sc-for list="{{ screens }}" as="s" hint-placeholder-count="4">
+      <figure style="margin:0;flex:0 0 min(260px,72vw);scroll-snap-align:start;display:flex;flex-direction:column;gap:14px">
+        <img src="{{ s.src }}" alt="{{ s.alt }}" loading="lazy" style="width:100%;aspect-ratio:1/2.03;object-fit:cover;border-radius:20px;background:#fffdf6;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+        <figcaption style="display:flex;flex-direction:column;gap:4px"><strong style="font-size:15px;font-weight:600">{{ s.title }}</strong><span style="font-size:14px;line-height:1.5;color:var(--muted);text-wrap:pretty">{{ s.note }}</span></figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+
+<section aria-labelledby="rt-all" style="display:flex;flex-direction:column;gap:24px">
+  <h2 id="rt-all" style="margin:0;font-family:'Lora',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em">The full system</h2>
+  <img src="assets/rootopia-mosaic.jpg" alt="Grid of Rootopia screens: doctors, filters, reviews, settings, profile, offers, order tracking, cart and wallet" loading="lazy" style="width:100%;border-radius:20px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;display:block">
+  <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--hair)">
+    <a href="#top" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair)" style-hover="background:var(--hair);opacity:1" style-focus="outline:2px solid var(--ink);outline-offset:2px">Back to top ↑</a>
+    <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 18px;font-size:14px;font-weight:600;border-radius:999px;background:var(--ink);color:var(--bg)" style-hover="opacity:.9;color:var(--bg)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:3px">See more work →</a>
+  </div>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const S = [
+      ['doctor', 'Book a botanist', 'Profile, specialisations and an open slot, all on one screen.', 'Botanist profile with available days and time slots'],
+      ['diseases', 'Diagnose by category', 'Common problems grouped visually, so people pick the right fix.', 'Diseases screen with scan and common problem tiles'],
+      ['water', 'A week of watering', 'A friendly reminder that shows the whole week at a glance.', 'Plant detail with humidity, light and a weekly water schedule'],
+      ['reminders', 'Care cards', 'Humidity, light and temperature for each plant you own.', 'Reminders list with care stats per plant'],
+      ['filter', 'Filter by your space', 'Pot size, light and price, matched to where the plant will live.', 'Filter sheet with sort, price, reviews, pot size and light'],
+      ['budget', 'Shop by budget', 'Entry points under ₹99, ₹199 and ₹299 for beginners.', 'Best sellers grouped by price'],
+      ['view360', '360° view', 'Rotate the plant before buying to see its real shape.', 'Plant shown on a 360 degree viewer'],
+      ['cart', 'Swipe to remove', 'Slide an item away instead of hunting for a delete icon.', 'Cart with a swiped item revealing delete'],
+      ['loading', 'Useful loading', 'A plant fact keeps the wait from feeling empty.', 'Loading screen with a Did you know plant fact']
+    ];
+    return { screens: S.map(([k, title, note, alt]) => ({ src: `assets/rt-${k}.jpg`, title, note, alt })) };
+  }
+}
+</script>
+</body>
+</html>

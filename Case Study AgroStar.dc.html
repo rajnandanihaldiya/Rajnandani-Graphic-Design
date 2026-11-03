@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="comet-cursor.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+[data-theme=dark]{--bg:#1a1a18;--ink:#eceae4;--muted:#a19e95;--hair:rgba(236,234,228,.16);--card:#21211e;--red:oklch(0.72 0.17 25)}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit;opacity:.8}
+</style>
+</helmet>
+<div data-theme="dark" id="top" style="background:var(--bg);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;min-height:100vh">
+<header style="position:sticky;top:0;z-index:30;background:var(--bg);box-shadow:0 1px 0 var(--hair)">
+  <nav aria-label="Case study" style="max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair);transition:background-color .15s ease,transform .1s ease" style-hover="background:var(--hair);opacity:1" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">← All work</a>
+    <a href="Portfolio v2.dc.html" style="font-family:'Newsreader',serif;font-size:19px;min-height:40px;display:flex;align-items:center" style-focus="outline:2px solid var(--ink);outline-offset:3px;border-radius:6px">Rajnandani Haldiya</a>
+    <span aria-hidden="true" style="width:104px"></span>
+  </nav>
+</header>
+
+<main style="max-width:1160px;margin:0 auto;padding:40px 20px 96px;display:flex;flex-direction:column;gap:104px">
+
+<section aria-labelledby="ag-title" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:16px;max-width:780px">
+    <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)"><span aria-hidden="true" style="width:56px;height:1px;background:var(--muted)"></span>AgroStar · Graphic design</div>
+    <h1 id="ag-title" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(34px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;text-wrap:balance">Designing for India’s farmers, <em style="color:var(--red)">in their language</em></h1>
+    <p style="margin:0;font-size:18px;line-height:1.5;color:var(--muted);text-wrap:pretty;max-width:62ch">Campaigns, product launches, ads and festive greetings for AgroStar, made in Hindi, Marathi and Gujarati for every screen a farmer uses.</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    <button type="button" onClick="{{ open0 }}" aria-label="Enlarge Red Friday WhatsApp creative" style="all:unset;cursor:zoom-in;flex:1.78 1 320px;min-width:0;border-radius:16px;overflow:hidden" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="assets/agrostar/rf-whatsapp.jpg" alt="" style="width:100%;height:100%;aspect-ratio:1334/750;object-fit:cover;display:block;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;border-radius:16px"></button>
+    <button type="button" onClick="{{ open1 }}" aria-label="Enlarge wheat seed social post" style="all:unset;cursor:zoom-in;flex:1 1 200px;min-width:0;border-radius:16px;overflow:hidden" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="assets/agrostar/wheat-1.jpg" alt="" style="width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;display:block;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px;border-radius:16px"></button>
+  </div>
+  <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px 32px;padding-top:20px;border-top:1px solid var(--hair);font-size:15px">
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Role</dt><dd style="margin:0">Graphic Design Intern</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Timeline</dt><dd style="margin:0">Jul – Dec 2024</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Languages</dt><dd style="margin:0">Hindi · Marathi · Gujarati</dd></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Scope</dt><dd style="margin:0">Campaigns, social, in-app, ads</dd></div>
+  </dl>
+</section>
+
+<section aria-labelledby="ag-system" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--red)">01 · One idea, every format</span>
+    <h2 id="ag-system" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">The Mega Payment Day campaign, sized for five channels</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">The same offer had to read in a 400px notification and on a full-screen story. The headline, the “MEGA” mark and the red-gold palette stay fixed; only the layout changes.</p>
+  </div>
+  <div role="region" aria-label="Campaign formats, scroll sideways" tabindex="0" style="display:flex;gap:16px;align-items:flex-end;overflow-x:auto;padding-bottom:12px;margin:0 -20px;padding-inline:20px" style-focus="outline:2px solid var(--ink);outline-offset:2px">
+    <sc-for list="{{ mega }}" as="m" hint-placeholder-count="5">
+      <figure style="margin:0;flex:none;display:flex;flex-direction:column;gap:10px">
+        <button type="button" onClick="{{ m.open }}" aria-label="Enlarge {{ m.label }}" style="all:unset;cursor:zoom-in;border-radius:12px" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="{{ m.src }}" alt="" loading="lazy" style="height:{{ m.h }}px;width:auto;display:block;border-radius:12px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></button>
+        <figcaption style="font-size:13px;color:var(--muted)">{{ m.label }}</figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+
+<section aria-labelledby="ag-rf" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--red)">02 · Campaign</span>
+    <h2 id="ag-rf" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Red Friday: one look, animated and in three languages</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">A bold red system built to stand out in a crowded feed, with animated versions for each state.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:12px">
+    <sc-for list="{{ rf }}" as="m" hint-placeholder-count="6">
+      <button type="button" onClick="{{ m.open }}" aria-label="Enlarge {{ m.label }}" style="all:unset;cursor:zoom-in;display:flex;flex-direction:column;gap:8px;border-radius:12px" style-focus="outline:2px solid var(--ink);outline-offset:3px">
+        <img src="{{ m.src }}" alt="" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:12px;background:var(--card);outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px">
+        <span style="font-size:13px;color:var(--muted)">{{ m.label }}</span>
+      </button>
+    </sc-for>
+  </div>
+</section>
+
+<section aria-labelledby="ag-wheat" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--red)">03 · Product launch</span>
+    <h2 id="ag-wheat" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Wheat seeds: real farmers, real fields</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">A four-post social series. Each variety gets its own farmer and one big number, so the series reads as a set in the feed.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px">
+    <sc-for list="{{ wheat }}" as="m" hint-placeholder-count="4">
+      <button type="button" onClick="{{ m.open }}" aria-label="Enlarge {{ m.label }}" style="all:unset;cursor:zoom-in;border-radius:12px" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="{{ m.src }}" alt="" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:12px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></button>
+    </sc-for>
+  </div>
+</section>
+
+<section aria-labelledby="ag-lang" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px 56px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--red)">04 · Localisation</span>
+    <h2 id="ag-lang" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Same layout, different script</h2>
+    <p style="margin:0;font-size:16px;line-height:1.6;color:var(--muted);text-wrap:pretty">Devanagari and Gujarati sit differently on the line, so each version is re-balanced by hand rather than swapped as text.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <sc-for list="{{ lang }}" as="m" hint-placeholder-count="4">
+      <figure style="margin:0;display:grid;grid-template-columns:minmax(0,1fr) 72px;gap:12px;align-items:center">
+        <button type="button" onClick="{{ m.open }}" aria-label="Enlarge {{ m.label }}" style="all:unset;cursor:zoom-in;border-radius:10px" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="{{ m.src }}" alt="" loading="lazy" style="width:100%;display:block;border-radius:10px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></button>
+        <figcaption style="font-size:13px;color:var(--muted)">{{ m.label }}</figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+
+<section aria-labelledby="ag-ads" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--red)">05 · Performance ads</span>
+    <h2 id="ag-ads" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Google ads in square, story and landscape</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px">
+    <sc-for list="{{ ads }}" as="a" hint-placeholder-count="2">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.56fr);gap:10px;align-items:end">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <button type="button" onClick="{{ a.openSq }}" aria-label="Enlarge {{ a.name }} square ad" style="all:unset;cursor:zoom-in;border-radius:10px" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="{{ a.sq }}" alt="" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:10px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></button>
+          <button type="button" onClick="{{ a.openWide }}" aria-label="Enlarge {{ a.name }} landscape ad" style="all:unset;cursor:zoom-in;border-radius:10px" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="{{ a.wide }}" alt="" loading="lazy" style="width:100%;aspect-ratio:1200/628;object-fit:cover;display:block;border-radius:10px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></button>
+        </div>
+        <button type="button" onClick="{{ a.openStory }}" aria-label="Enlarge {{ a.name }} story ad" style="all:unset;cursor:zoom-in;border-radius:10px" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="{{ a.story }}" alt="" loading="lazy" style="width:100%;aspect-ratio:1080/1920;object-fit:cover;display:block;border-radius:10px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></button>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section aria-labelledby="ag-fest" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--red)">06 · Festive</span>
+    <h2 id="ag-fest" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Greetings for the festivals farmers celebrate</h2>
+  </div>
+  <div role="region" aria-label="Festive posts, scroll sideways" tabindex="0" style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin:0 -20px;padding-inline:20px;scroll-padding-inline:20px" style-focus="outline:2px solid var(--ink);outline-offset:2px">
+    <sc-for list="{{ fest }}" as="m" hint-placeholder-count="6">
+      <button type="button" onClick="{{ m.open }}" aria-label="Enlarge {{ m.label }}" style="all:unset;cursor:zoom-in;flex:0 0 min(240px,64vw);scroll-snap-align:start;border-radius:12px" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="{{ m.src }}" alt="" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;display:block;border-radius:12px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></button>
+    </sc-for>
+  </div>
+</section>
+
+<section aria-labelledby="ag-more" style="display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:680px">
+    <span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--red)">07 · In-app &amp; engagement</span>
+    <h2 id="ag-more" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.01em;text-wrap:balance">Referrals, loyalty, quizzes and safety tips</h2>
+  </div>
+  <div style="columns:3 260px;column-gap:12px">
+    <sc-for list="{{ more }}" as="m" hint-placeholder-count="9">
+      <button type="button" onClick="{{ m.open }}" aria-label="Enlarge {{ m.label }}" style="all:unset;cursor:zoom-in;display:block;break-inside:avoid;margin-bottom:12px;border-radius:12px" style-focus="outline:2px solid var(--ink);outline-offset:3px"><img src="{{ m.src }}" alt="" loading="lazy" style="width:100%;display:block;border-radius:12px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></button>
+    </sc-for>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--hair)">
+    <a href="#top" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--hair)" style-hover="background:var(--hair);opacity:1" style-focus="outline:2px solid var(--ink);outline-offset:2px">Back to top ↑</a>
+    <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 18px;font-size:14px;font-weight:600;border-radius:999px;background:var(--ink);color:var(--bg)" style-hover="opacity:.9;color:var(--bg)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:3px">See more work →</a>
+  </div>
+</section>
+
+</main>
+
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="{{ lbLabel }}" onClick="{{ close }}" style="position:fixed;inset:0;z-index:100;background:rgba(10,10,9,.92);display:flex;align-items:center;justify-content:center;padding:56px 20px 24px;cursor:zoom-out">
+    <img src="{{ lbSrc }}" alt="{{ lbLabel }}" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:12px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px">
+    <button type="button" data-lb-close="1" onClick="{{ close }}" aria-label="Close" style="position:absolute;top:12px;right:16px;width:40px;height:40px;border-radius:999px;border:0;background:var(--card);color:var(--ink);font-size:20px;cursor:pointer;box-shadow:inset 0 0 0 1px var(--hair)" style-focus="outline:2px solid var(--ink);outline-offset:2px">×</button>
+  </div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lb: null };
+  closeRef = React.createRef();
+  componentDidMount() {
+    this.onKey = e => { if (e.key === 'Escape' && this.state.lb) this.close(); };
+    document.addEventListener('keydown', this.onKey);
+  }
+  componentWillUnmount() { document.removeEventListener('keydown', this.onKey); }
+  open(src, label) {
+    this.lastFocus = document.activeElement;
+    this.setState({ lb: { src, label } });
+    let n = 0; const t = () => { const b = document.querySelector('[data-lb-close]'); if (b) b.focus(); else if (n++ < 20) setTimeout(t, 25); }; setTimeout(t, 30);
+  }
+  close = () => { this.setState({ lb: null }); if (this.lastFocus && this.lastFocus.focus) this.lastFocus.focus(); };
+  item(file, label, extra) { const src = 'assets/agrostar/' + file; return { src, label, open: () => this.open(src, label), ...(extra || {}) }; }
+  renderVals() {
+    const I = (f, l, e) => this.item(f, l, e);
+    return {
+      open0: () => this.open('assets/agrostar/rf-whatsapp.jpg', 'Red Friday WhatsApp creative'),
+      open1: () => this.open('assets/agrostar/wheat-1.jpg', 'Wheat seed social post'),
+      mega: [
+        I('mega-noti.jpg', 'Push notification', { h: 180 }),
+        I('mega-inapp.jpg', 'In-app pop-up', { h: 380 }),
+        I('mega-scroll.jpg', 'Home scroll banner', { h: 260 }),
+        I('mega-whatsapp.jpg', 'WhatsApp', { h: 260 }),
+        I('mega-surkhiya.jpg', 'Story', { h: 380 })
+      ],
+      rf: [
+        I('rf-offer-mp.gif', 'Animated offer · Hindi'), I('rf-offer-gj.gif', 'Animated offer · Gujarati'), I('rf-hindi.gif', 'Animated teaser · Hindi'),
+        I('rf-scroll.jpg', 'Scroll banner · Gujarati'), I('rf-noti.jpg', 'Notification · Gujarati'), I('red-week.jpg', 'Red Week offer · Hindi')
+      ],
+      wheat: [I('wheat-1.jpg', 'Wheat 3221 post'), I('wheat-2.jpg', 'Wheat 3222 post'), I('wheat-3.jpg', 'Wheat 3225 post'), I('wheat-4.jpg', 'Wheat 3227 post')],
+      lang: [I('wheat-book-1.jpg', 'Hindi'), I('wheat-book-gj.jpg', 'Gujarati'), I('kharif-mh.jpg', 'Marathi'), I('kharif-gj.jpg', 'Gujarati')],
+      ads: [
+        { name: 'Faster', sq: 'assets/agrostar/faster-sq.jpg', story: 'assets/agrostar/faster-story.jpg', wide: 'assets/agrostar/faster-wide.jpg',
+          openSq: () => this.open('assets/agrostar/faster-sq.jpg', 'Faster square ad'), openStory: () => this.open('assets/agrostar/faster-story.jpg', 'Faster story ad'), openWide: () => this.open('assets/agrostar/faster-wide.jpg', 'Faster landscape ad') },
+        { name: 'Red Baby', sq: 'assets/agrostar/redbaby-sq.jpg', story: 'assets/agrostar/redbaby-story.jpg', wide: 'assets/agrostar/redbaby-wide.jpg',
+          openSq: () => this.open('assets/agrostar/redbaby-sq.jpg', 'Red Baby square ad'), openStory: () => this.open('assets/agrostar/redbaby-story.jpg', 'Red Baby story ad'), openWide: () => this.open('assets/agrostar/redbaby-wide.jpg', 'Red Baby landscape ad') }
+      ],
+      fest: [
+        I('fest-chhath.jpg', 'Chhath Puja greeting'), I('fest-labh.jpg', 'Labh Pancham greeting'), I('prachar-1.jpg', 'Ganesh Chaturthi greeting'),
+        I('sanchar-1.jpg', 'Janmashtami greeting'), I('sanchar-2.jpg', 'Janmashtami greeting, alternate'), I('fest-newyear.jpg', 'New Year 2025 greeting'),
+        I('prachar-2.jpg', 'Ganesh Chaturthi greeting, alternate'), I('fest-diwali.jpg', 'Diwali product grid')
+      ],
+      more: [
+        I('kisan-ref.jpg', 'Kisan Jodo referral'), I('quiz-inapp.jpg', 'Quiz in-app'), I('ksy-mh.jpg', 'Kisan Samruddhi loyalty · Marathi'),
+        I('saathi-scroll.jpg', 'Saathi Safal festival'), I('safety-3.jpg', 'Weather safety'), I('kisan-mp.jpg', 'Kisan Jodo November'),
+        I('yearend.jpg', 'Year-end cashback'), I('potato.jpg', 'Potato seed banner'), I('quiz-scroll.jpg', 'Quiz scroll banner'),
+        I('kisan-rj.jpg', 'Kisan Jodo December'), I('ksy-mp.jpg', 'Kisan Samruddhi loyalty · Hindi'), I('safety-4.jpg', 'Weather safety, alternate')
+      ],
+      lbOpen: !!this.state.lb,
+      lbSrc: this.state.lb ? this.state.lb.src : '',
+      lbLabel: this.state.lb ? this.state.lb.label : '',
+      close: this.close
+    };
+  }
+}
+</script>
+</body>
+</html>

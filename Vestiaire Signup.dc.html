@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="width:340px;max-width:100%;padding:10px;border-radius:52px;background:#151514;box-shadow:0 40px 80px -30px rgba(60,30,10,.45),0 12px 24px -12px rgba(60,30,10,.35),inset 0 0 0 1.5px #3a3a38;box-sizing:border-box;font-family:'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased">
+  <div style="border-radius:42px;background:#ffffff;color:#141414;overflow:hidden;display:flex;flex-direction:column;min-height:700px">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 28px 0;font-size:14px;font-weight:600;height:30px"><span>9:41</span><span aria-hidden="true" style="width:96px;height:28px;border-radius:999px;background:#151514"></span><span aria-hidden="true" style="display:flex;gap:4px;align-items:center"><span style="width:16px;height:10px;border-radius:2px;background:#141414"></span><span style="width:22px;height:11px;border-radius:3px;box-shadow:inset 0 0 0 1.5px #141414;padding:2px;box-sizing:border-box"><span style="display:block;width:100%;height:100%;border-radius:1px;background:#141414"></span></span></span></div>
+    <div style="padding:8px 20px 24px;display:flex;flex-direction:column;gap:16px;flex:1">
+      <button type="button" aria-label="Back" style="align-self:flex-start;width:44px;height:44px;margin-left:-12px;border:none;background:transparent;color:#141414;font-size:22px;cursor:pointer;border-radius:10px" style-focus="outline:2px solid #141414;outline-offset:-4px">‹</button>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <h3 style="margin:0;font-family:'Lora',serif;font-weight:500;font-size:24px;line-height:1.15;letter-spacing:-.01em">Create your account</h3>
+        <p style="margin:0;font-size:13px;line-height:1.45;color:#5c5c5c">Join Vestiaire Collective to discover pre-loved luxury fashion.</p>
+      </div>
+      <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:12px">
+        <label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:500">Full name</span><input type="text" autocomplete="name" placeholder="e.g. Julie Martin" value="{{ name }}" onChange="{{ onName }}" style="height:48px;padding:0 16px;font:inherit;font-size:16px;color:#141414;border:none;border-radius:10px;background:#f5f5f4;box-shadow:inset 0 0 0 1px #dcdcda;outline:none;box-sizing:border-box;width:100%" style-focus="box-shadow:inset 0 0 0 2px #141414"></label>
+        <label style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:500">Email</span><input type="email" autocomplete="email" placeholder="e.g. julie@email.com" value="{{ email }}" onChange="{{ onEmail }}" style="height:48px;padding:0 16px;font:inherit;font-size:16px;color:#141414;border:none;border-radius:10px;background:#f5f5f4;box-shadow:inset 0 0 0 1px #dcdcda;outline:none;box-sizing:border-box;width:100%" style-focus="box-shadow:inset 0 0 0 2px #141414"></label>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="{{ pwId }}" style="font-size:12px;font-weight:500">Password</label>
+          <div style="position:relative">
+            <input id="{{ pwId }}" type="{{ pwType }}" autocomplete="new-password" placeholder="Create a password" value="{{ pw }}" onChange="{{ onPw }}" aria-describedby="{{ reqId }}" style="height:48px;padding:0 52px 0 16px;font:inherit;font-size:16px;color:#141414;border:none;border-radius:10px;background:#f5f5f4;box-shadow:inset 0 0 0 1px #dcdcda;outline:none;box-sizing:border-box;width:100%" style-focus="box-shadow:inset 0 0 0 2px #141414">
+            <button type="button" onClick="{{ toggleShow }}" aria-label="{{ showLabel }}" aria-pressed="{{ show }}" style="position:absolute;right:2px;top:2px;width:44px;height:44px;border:none;background:transparent;color:#5c5c5c;font-size:12px;font-weight:600;cursor:pointer;border-radius:8px" style-focus="outline:2px solid #141414;outline-offset:-4px">{{ showText }}</button>
+          </div>
+          <ul id="{{ reqId }}" aria-live="polite" style="margin:2px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px">
+            <sc-for list="{{ reqs }}" as="r" hint-placeholder-count="3">
+              <li style="display:flex;align-items:center;gap:8px;font-size:12px;line-height:1.4;color:{{ r.color }};transition:color .2s ease"><span aria-hidden="true" style="width:16px;height:16px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;background:{{ r.dot }};box-shadow:inset 0 0 0 1.5px {{ r.ring }};transition:background-color .2s ease,box-shadow .2s ease">{{ r.mark }}</span><span>{{ r.label }}</span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ r.sr }}</span></li>
+            </sc-for>
+          </ul>
+        </div>
+        <label style="display:flex;align-items:flex-start;gap:10px;min-height:44px;padding-top:4px;cursor:pointer;font-size:12px;line-height:1.45;color:#3d3d3d"><input type="checkbox" checked="{{ marketing }}" onChange="{{ onMarketing }}" style="width:20px;height:20px;margin:0;flex:none;accent-color:#141414">Send me updates about new arrivals and offers. Optional.</label>
+        <button type="submit" style="height:48px;border:none;border-radius:10px;font:inherit;font-size:15px;font-weight:600;cursor:pointer;background:{{ ctaBg }};color:{{ ctaInk }};transition:background-color .2s ease,transform .1s ease" style-active="transform:scale(.98)" style-focus="outline:2px solid #141414;outline-offset:2px">{{ ctaText }}</button>
+        <p style="margin:0;font-size:11.5px;line-height:1.5;color:#5c5c5c;text-align:center;text-wrap:pretty">By creating an account, you agree to our <a href="#" style="color:#141414;text-decoration:underline;text-underline-offset:2px">Terms of Service</a> and acknowledge our <a href="#" style="color:#141414;text-decoration:underline;text-underline-offset:2px">Privacy Policy</a>.</p>
+      </form>
+      <div style="display:flex;align-items:center;gap:12px;font-size:11px;color:#8a8a8a"><span style="flex:1;height:1px;background:#e4e4e2"></span>or<span style="flex:1;height:1px;background:#e4e4e2"></span></div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <button type="button" style="height:48px;padding:0 16px;display:flex;align-items:center;justify-content:center;gap:10px;border:none;border-radius:10px;background:#fff;box-shadow:inset 0 0 0 1px #c9c9c6;font:inherit;font-size:15px;font-weight:500;color:#141414;cursor:pointer" style-active="transform:scale(.98)" style-focus="outline:2px solid #141414;outline-offset:2px"><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.5l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.7 13.2l7.8 6.1C12.4 13.6 17.7 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.6 5.9c4.4-4.1 7-10.1 7-17.6z"></path><path fill="#FBBC05" d="M10.5 28.7c-.5-1.5-.8-3-.8-4.7s.3-3.2.8-4.7l-7.8-6.1C1 16.5 0 20.1 0 24s1 7.5 2.7 10.8l7.8-6.1z"></path><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.8 6.1C6.6 42.6 14.6 48 24 48z"></path></svg>Continue with Google</button>
+        <button type="button" style="height:48px;padding:0 16px;display:flex;align-items:center;justify-content:center;gap:10px;border:none;border-radius:10px;background:#141414;font:inherit;font-size:15px;font-weight:500;color:#fff;cursor:pointer" style-active="transform:scale(.98)" style-focus="outline:2px solid #141414;outline-offset:2px"><svg width="16" height="19" viewBox="0 0 17 20" aria-hidden="true"><path fill="currentColor" d="M14.1 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9C3.6 4.8 2 5.8 1.1 7.4c-1.9 3.2-.5 8 1.3 10.6.9 1.3 1.9 2.7 3.3 2.6 1.3-.1 1.8-.8 3.4-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.2-2.6 1-1.5 1.4-2.9 1.4-3-.1 0-2.9-1.1-3-4.4zM11.5 3c.7-.9 1.2-2.1 1.1-3-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.1 1.1.1 2.3-.6 3-1.7z"></path></svg>Continue with Apple</button>
+      </div>
+      <p style="margin:0;font-size:13px;text-align:center;color:#5c5c5c">Already have an account? <a href="#" style="color:#141414;font-weight:600;text-decoration:underline;text-underline-offset:2px">Log in</a></p>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:360,&quot;height&quot;:740},&quot;initialPassword&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.uid = 'vs' + Math.random().toString(36).slice(2, 8);
+    this.state = { name: '', email: '', pw: (props && props.initialPassword) || '', show: false, marketing: false, sent: false };
+  }
+  renderVals() {
+    const pw = this.state.pw;
+    const rules = [
+      ['At least 8 characters', pw.length >= 8],
+      ['At least 1 number', /\d/.test(pw)],
+      ['Both upper and lower case letters', /[a-z]/.test(pw) && /[A-Z]/.test(pw)]
+    ];
+    const ok = rules.every(r => r[1]);
+    const ready = ok && this.state.name.trim() && /.+@.+\..+/.test(this.state.email);
+    return {
+      name: this.state.name, email: this.state.email, pw,
+      pwId: this.uid + '-pw', reqId: this.uid + '-req',
+      pwType: this.state.show ? 'text' : 'password',
+      show: this.state.show,
+      showText: this.state.show ? 'Hide' : 'Show',
+      showLabel: this.state.show ? 'Hide password' : 'Show password',
+      marketing: this.state.marketing,
+      reqs: rules.map(([label, met]) => ({
+        label, mark: met ? '✓' : '',
+        color: met ? '#1d6b3f' : '#5c5c5c',
+        dot: met ? '#1f7a45' : 'transparent',
+        ring: met ? '#1f7a45' : '#a3a3a0',
+        sr: met ? ', met' : ', not yet met'
+      })),
+      ctaBg: ready ? '#141414' : '#e8e8e6',
+      ctaInk: ready ? '#ffffff' : '#6b6b6b',
+      ctaText: this.state.sent ? 'Account created ✓' : 'Create account',
+      onName: e => this.setState({ name: e.target.value, sent: false }),
+      onEmail: e => this.setState({ email: e.target.value, sent: false }),
+      onPw: e => this.setState({ pw: e.target.value, sent: false }),
+      toggleShow: () => this.setState(s => ({ show: !s.show })),
+      onMarketing: e => this.setState({ marketing: e.target.checked }),
+      submit: e => { e.preventDefault(); if (ready) this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

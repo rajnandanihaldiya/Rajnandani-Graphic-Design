@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="comet-cursor.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Caveat:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth}
+[data-theme=dark]{--bg:#1b1b1a;--ink:#eceae4;--muted:#a19e95;--hair:rgba(236,234,228,.16);--card:#21211e;--inv:#eceae4;--invink:#1a1a18;--page:#23221f;--accent:oklch(0.78 0.14 60);--note:oklch(0.88 0.13 90)}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit;opacity:.75}
+@keyframes aiFlow{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes jOpen{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+</helmet>
+<div data-theme="dark" style="background:var(--bg);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;min-height:100vh" id="top">
+<header style="position:sticky;top:0;z-index:40;background:var(--bg);box-shadow:0 1px 0 var(--hair)">
+  <div style="max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <a href="Portfolio v2.dc.html" style="font-family:'Newsreader',serif;font-size:20px;letter-spacing:-.01em;min-height:40px;display:flex;align-items:center" style-focus="outline:2px solid var(--ink);outline-offset:3px;border-radius:6px">Rajnandani Haldiya</a>
+    <nav aria-label="Sections" style="display:flex;gap:8px">
+      <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;box-shadow:inset 0 0 0 1px var(--hair)" style-hover="background:var(--hair);opacity:1" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Projects</a>
+      <a href="About.dc.html" aria-current="page" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;background:var(--hair)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">About</a>
+      <a href="Portfolio v2.dc.html#resume" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;font-weight:500;background:var(--inv);color:var(--invink)" style-hover="opacity:.88;color:var(--invink)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section aria-labelledby="about-title" style="max-width:1240px;margin:0 auto;padding:48px 28px 0;display:flex;flex-direction:column;align-items:center;gap:28px">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;animation:jOpen .6s cubic-bezier(.2,0,0,1) both">
+    <h1 id="about-title" style="margin:0;font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-.025em">Beyond designs</h1>
+    <p style="margin:0;max-width:44ch;font-size:16px;line-height:1.55;color:var(--muted);text-wrap:balance">I sketch, paint, travel, explore art, build side projects — and occasionally get distracted by cats.</p>
+  </div>
+
+  <figure id="art" style="position:relative;margin:0;width:100%;max-width:1120px;container-type:inline-size;scroll-margin-top:80px;animation:jOpen .7s cubic-bezier(.2,0,0,1) .1s both">
+    <img src="assets/about/diary.webp" alt="My diary: a polaroid of me, a note that today is for big ideas and small progress, my story from graphic design to product design, things that fuel me, my art corner and a to-do list" style="display:block;width:100%;height:auto">
+    <div aria-hidden="true" style="position:absolute;left:10.791%;top:18.910%;width:24.744%;height:32.599%;transition:transform .3s cubic-bezier(.2,0,0,1),filter .3s ease;transform-origin:50% 10%" style-hover="transform:rotate(-2.5deg) scale(1.03);filter:drop-shadow(0 18px 24px rgba(0,0,0,.35))"><img src="assets/about/hot-polaroid.png" alt="" style="display:block;width:100%;height:100%"></div>
+    <div aria-hidden="true" style="position:absolute;left:36.977%;top:33.063%;width:11.860%;height:18.852%;transition:transform .3s cubic-bezier(.2,0,0,1),filter .3s ease" style-hover="transform:translateY(-3%) rotate(-3deg)"><img src="assets/about/hot-cup.png" alt="" style="display:block;width:100%;height:100%"><span style="position:absolute;left:50%;top:-4%;transform:translateX(-50%);white-space:nowrap;font-family:'Caveat',cursive;font-size:2.2cqw;color:#6b4a32;opacity:0;transition:opacity .2s ease" style-hover="opacity:1">refill, please ☕</span></div>
+    <button type="button" onClick="{{ open0 }}" aria-label="View painting: Pencil-and-paint study of eyes" style="position:absolute;left:52.744%;top:25.116%;width:13.116%;height:13.109%;padding:0;border:none;background:none;cursor:zoom-in;border-radius:1.2cqw;transition:transform .3s cubic-bezier(.2,0,0,1),filter .3s ease" style-hover="transform:translateY(-3%) scale(1.06) rotate(-1.5deg);filter:drop-shadow(0 16px 20px rgba(0,0,0,.35));z-index:2" style-focus="outline:3px solid #1d3f9a;outline-offset:3px"><img src="assets/about/hot-a1.png" alt="" style="display:block;width:100%;height:100%"></button>
+    <button type="button" onClick="{{ open1 }}" aria-label="View painting: Swirling blue painting of a boat, in a Van Gogh style" style="position:absolute;left:66.791%;top:25.116%;width:13.116%;height:13.109%;padding:0;border:none;background:none;cursor:zoom-in;border-radius:1.2cqw;transition:transform .3s cubic-bezier(.2,0,0,1),filter .3s ease" style-hover="transform:translateY(-3%) scale(1.06) rotate(1.5deg);filter:drop-shadow(0 16px 20px rgba(0,0,0,.35));z-index:2" style-focus="outline:3px solid #1d3f9a;outline-offset:3px"><img src="assets/about/hot-a2.png" alt="" style="display:block;width:100%;height:100%"></button>
+    <button type="button" onClick="{{ open2 }}" aria-label="View painting: Anime character canvases on easels" style="position:absolute;left:52.744%;top:39.617%;width:13.116%;height:13.109%;padding:0;border:none;background:none;cursor:zoom-in;border-radius:1.2cqw;transition:transform .3s cubic-bezier(.2,0,0,1),filter .3s ease" style-hover="transform:translateY(-3%) scale(1.06) rotate(-1.5deg);filter:drop-shadow(0 16px 20px rgba(0,0,0,.35));z-index:2" style-focus="outline:3px solid #1d3f9a;outline-offset:3px"><img src="assets/about/hot-a3.png" alt="" style="display:block;width:100%;height:100%"></button>
+    <button type="button" onClick="{{ open3 }}" aria-label="View painting: Spider-Man canvas in progress" style="position:absolute;left:66.791%;top:39.617%;width:13.116%;height:13.109%;padding:0;border:none;background:none;cursor:zoom-in;border-radius:1.2cqw;transition:transform .3s cubic-bezier(.2,0,0,1),filter .3s ease" style-hover="transform:translateY(-3%) scale(1.06) rotate(1.5deg);filter:drop-shadow(0 16px 20px rgba(0,0,0,.35));z-index:2" style-focus="outline:3px solid #1d3f9a;outline-offset:3px"><img src="assets/about/hot-a4.png" alt="" style="display:block;width:100%;height:100%"></button>
+    <button type="button" role="checkbox" aria-checked="{{ td0 }}" aria-label="Build a portfolio" onClick="{{ tg0 }}" style="position:absolute;left:58.326%;top:62.007%;width:12.140%;height:2.900%;padding:0;border:none;background:none;cursor:pointer;transform:rotate(-4.5deg);transform-origin:0 50%;border-radius:.6cqw" style-hover="background:rgba(29,63,154,.07)" style-focus="outline:2px solid #1d3f9a;outline-offset:2px">
+      <span aria-hidden="true" style="position:absolute;left:3.83%;top:6%;width:12.26%;aspect-ratio:1;background:#f9dc8c;box-shadow:inset 0 0 0 .14cqw #2d3b6b;opacity:{{ un0 }};transition:opacity .15s ease"></span>
+      <span aria-hidden="true" style="position:absolute;left:3.83%;top:-14%;font-family:'Caveat',cursive;font-weight:600;font-size:3cqw;line-height:1;color:#1d3f9a;opacity:{{ ck0 }};transform:scale({{ cs0 }});transition:opacity .2s cubic-bezier(.2,0,0,1),transform .25s cubic-bezier(.2,0,0,1)">✓</span>
+      <span aria-hidden="true" style="position:absolute;left:19.92%;top:48%;height:.18cqw;width:calc(76.25% * {{ sw0 }});background:#1d3f9a;border-radius:1px;transition:width .35s cubic-bezier(.2,0,0,1)"></span>
+    </button>
+    <button type="button" role="checkbox" aria-checked="{{ td1 }}" aria-label="Finish a case study I’ve been avoiding" onClick="{{ tg1 }}" style="position:absolute;left:58.465%;top:65.081%;width:22.465%;height:2.900%;padding:0;border:none;background:none;cursor:pointer;transform:rotate(-4.5deg);transform-origin:0 50%;border-radius:.6cqw" style-hover="background:rgba(29,63,154,.07)" style-focus="outline:2px solid #1d3f9a;outline-offset:2px">
+      
+      <span aria-hidden="true" style="position:absolute;left:2.07%;top:-14%;font-family:'Caveat',cursive;font-weight:600;font-size:3cqw;line-height:1;color:#1d3f9a;opacity:{{ ck1 }};transform:scale({{ cs1 }});transition:opacity .2s cubic-bezier(.2,0,0,1),transform .25s cubic-bezier(.2,0,0,1)">✓</span>
+      <span aria-hidden="true" style="position:absolute;left:10.77%;top:48%;height:.18cqw;width:calc(87.16% * {{ sw1 }});background:#1d3f9a;border-radius:1px;transition:width .35s cubic-bezier(.2,0,0,1)"></span>
+    </button>
+    <button type="button" role="checkbox" aria-checked="{{ td2 }}" aria-label="Work on a side project" onClick="{{ tg2 }}" style="position:absolute;left:58.605%;top:68.097%;width:15.349%;height:2.900%;padding:0;border:none;background:none;cursor:pointer;transform:rotate(-4.5deg);transform-origin:0 50%;border-radius:.6cqw" style-hover="background:rgba(29,63,154,.07)" style-focus="outline:2px solid #1d3f9a;outline-offset:2px">
+      
+      <span aria-hidden="true" style="position:absolute;left:3.03%;top:-14%;font-family:'Caveat',cursive;font-weight:600;font-size:3cqw;line-height:1;color:#1d3f9a;opacity:{{ ck2 }};transform:scale({{ cs2 }});transition:opacity .2s cubic-bezier(.2,0,0,1),transform .25s cubic-bezier(.2,0,0,1)">✓</span>
+      <span aria-hidden="true" style="position:absolute;left:15.76%;top:48%;height:.18cqw;width:calc(81.21% * {{ sw2 }});background:#1d3f9a;border-radius:1px;transition:width .35s cubic-bezier(.2,0,0,1)"></span>
+    </button>
+    <button type="button" role="checkbox" aria-checked="{{ td3 }}" aria-label="Read or research something interesting" onClick="{{ tg3 }}" style="position:absolute;left:58.837%;top:71.230%;width:22.558%;height:2.900%;padding:0;border:none;background:none;cursor:pointer;transform:rotate(-4.5deg);transform-origin:0 50%;border-radius:.6cqw" style-hover="background:rgba(29,63,154,.07)" style-focus="outline:2px solid #1d3f9a;outline-offset:2px">
+      
+      <span aria-hidden="true" style="position:absolute;left:2.06%;top:-14%;font-family:'Caveat',cursive;font-weight:600;font-size:3cqw;line-height:1;color:#1d3f9a;opacity:{{ ck3 }};transform:scale({{ cs3 }});transition:opacity .2s cubic-bezier(.2,0,0,1),transform .25s cubic-bezier(.2,0,0,1)">✓</span>
+      <span aria-hidden="true" style="position:absolute;left:10.72%;top:48%;height:.18cqw;width:calc(87.22% * {{ sw3 }});background:#1d3f9a;border-radius:1px;transition:width .35s cubic-bezier(.2,0,0,1)"></span>
+    </button>
+    <button type="button" role="checkbox" aria-checked="{{ td4 }}" aria-label="Find a new café to work from" onClick="{{ tg4 }}" style="position:absolute;left:59.023%;top:74.362%;width:20.047%;height:2.900%;padding:0;border:none;background:none;cursor:pointer;transform:rotate(-4.5deg);transform-origin:0 50%;border-radius:.6cqw" style-hover="background:rgba(29,63,154,.07)" style-focus="outline:2px solid #1d3f9a;outline-offset:2px">
+      
+      <span aria-hidden="true" style="position:absolute;left:2.32%;top:-14%;font-family:'Caveat',cursive;font-weight:600;font-size:3cqw;line-height:1;color:#1d3f9a;opacity:{{ ck4 }};transform:scale({{ cs4 }});transition:opacity .2s cubic-bezier(.2,0,0,1),transform .25s cubic-bezier(.2,0,0,1)">✓</span>
+      <span aria-hidden="true" style="position:absolute;left:12.06%;top:48%;height:.18cqw;width:calc(85.61% * {{ sw4 }});background:#1d3f9a;border-radius:1px;transition:width .35s cubic-bezier(.2,0,0,1)"></span>
+    </button>
+    <button type="button" role="checkbox" aria-checked="{{ td5 }}" aria-label="Paint when I have absolutely no idea what to paint" onClick="{{ tg5 }}" style="position:absolute;left:59.209%;top:77.436%;width:18.698%;height:4.640%;padding:0;border:none;background:none;cursor:pointer;transform:rotate(-4.5deg);transform-origin:0 50%;border-radius:.6cqw" style-hover="background:rgba(29,63,154,.07)" style-focus="outline:2px solid #1d3f9a;outline-offset:2px">
+      
+      <span aria-hidden="true" style="position:absolute;left:2.49%;top:-14%;font-family:'Caveat',cursive;font-weight:600;font-size:3cqw;line-height:1;color:#1d3f9a;opacity:{{ ck5 }};transform:scale({{ cs5 }});transition:opacity .2s cubic-bezier(.2,0,0,1),transform .25s cubic-bezier(.2,0,0,1)">✓</span>
+      <span aria-hidden="true" style="position:absolute;left:12.94%;top:30%;height:.18cqw;width:calc(84.58% * {{ sw5 }});background:#1d3f9a;border-radius:1px;transition:width .35s cubic-bezier(.2,0,0,1)"></span>
+    </button>
+    <button type="button" onClick="{{ meow }}" aria-label="Pet the cat" style="position:absolute;left:53.023%;top:79.756%;width:4.186%;height:4.350%;padding:0;border:none;background:none;cursor:pointer;transition:transform .3s cubic-bezier(.2,0,0,1),filter .3s ease" style-hover="transform:rotate(-8deg) scale(1.1)" style-active="transform:scale(.96)" style-focus="outline:2px solid #1d3f9a;outline-offset:2px;border-radius:50%"><img src="assets/about/hot-cat.png" alt="" style="display:block;width:100%;height:100%"></button>
+    <span aria-live="polite" style="position:absolute;left:53.953%;top:75.986%;font-family:'Caveat',cursive;font-size:2.3cqw;color:#2a2418;background:#fff;padding:.3cqw .9cqw;border-radius:1cqw;box-shadow:0 4px 12px rgba(0,0,0,.18);opacity:{{ meowOp }};transform:translateY({{ meowY }});transition:opacity .2s ease,transform .25s cubic-bezier(.2,0,0,1);pointer-events:none">{{ meowText }}</span>
+  </figure>
+  <sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="{{ lbAlt }}" onClick="{{ close }}" style="position:fixed;inset:0;z-index:100;background:rgba(12,12,11,.86);display:flex;align-items:center;justify-content:center;padding:24px;animation:jOpen .25s cubic-bezier(.2,0,0,1) both">
+      <figure onClick="{{ stop }}" style="margin:0;display:flex;flex-direction:column;gap:12px;max-width:min(960px,100%)">
+        <sc-if value="{{ lb0 }}" hint-placeholder-val="{{ false }}"><img src="assets/about/hot-a1.png" alt="{{ lbAlt }}" style="display:block;max-width:100%;max-height:78vh;border-radius:12px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></sc-if><sc-if value="{{ lb1 }}" hint-placeholder-val="{{ false }}"><img src="assets/about/hot-a2.png" alt="{{ lbAlt }}" style="display:block;max-width:100%;max-height:78vh;border-radius:12px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></sc-if><sc-if value="{{ lb2 }}" hint-placeholder-val="{{ false }}"><img src="assets/about/hot-a3.png" alt="{{ lbAlt }}" style="display:block;max-width:100%;max-height:78vh;border-radius:12px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></sc-if><sc-if value="{{ lb3 }}" hint-placeholder-val="{{ false }}"><img src="assets/about/hot-a4.png" alt="{{ lbAlt }}" style="display:block;max-width:100%;max-height:78vh;border-radius:12px;outline:1px solid oklch(1 0 0 / 0.1);outline-offset:-1px"></sc-if>
+        <figcaption style="display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:14px;color:var(--muted)"><span>{{ lbAlt }}</span><span style="display:flex;gap:8px"><button type="button" onClick="{{ prev }}" aria-label="Previous painting" style="width:40px;height:40px;border-radius:50%;border:none;background:transparent;box-shadow:inset 0 0 0 1px var(--hair);color:var(--ink);cursor:pointer" style-hover="background:var(--hair)" style-focus="outline:2px solid var(--ink);outline-offset:2px">←</button><button type="button" onClick="{{ next }}" aria-label="Next painting" style="width:40px;height:40px;border-radius:50%;border:none;background:transparent;box-shadow:inset 0 0 0 1px var(--hair);color:var(--ink);cursor:pointer" style-hover="background:var(--hair)" style-focus="outline:2px solid var(--ink);outline-offset:2px">→</button><button type="button" ref="{{ closeRef }}" onClick="{{ close }}" aria-label="Close" style="width:40px;height:40px;border-radius:50%;border:none;background:var(--inv);color:var(--invink);cursor:pointer" style-focus="outline:2px solid var(--ink);outline-offset:2px">✕</button></span></figcaption>
+      </figure>
+    </div>
+  </sc-if>
+  <p style="margin:-12px 0 0;font-size:13px;color:var(--muted);text-align:center">Tick the to-dos, open a painting, or say hi to the cat.</p>
+</section>
+
+<section aria-label="Experience and skills" style="max-width:1240px;margin:0 auto;padding:96px 28px 96px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px 72px">
+    <div style="display:flex;flex-direction:column">
+      <h2 style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Experience</h2>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:18px 0;border-top:1px solid var(--hair)">
+        <span style="font-size:16px;font-weight:500">Freelance UX/UI &amp; Graphic Designer</span>
+        <span style="font-size:13px;color:var(--muted);text-align:right">Apr 2026 — Present</span>
+        <span style="font-size:14px;color:var(--muted)">Remote</span><span></span>
+        <span style="font-size:14px;line-height:1.5;margin-top:6px;grid-column:1 / -1;text-wrap:pretty">Websites and interfaces for small-business clients, including Swojas Enterprises and DAEvol.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:18px 0;border-top:1px solid var(--hair)">
+        <span style="font-size:16px;font-weight:500">Digital Experience Designer</span>
+        <span style="font-size:13px;color:var(--muted);text-align:right">Jan 2025 — Mar 2026</span>
+        <span style="font-size:14px;color:var(--muted)">MCCIA, Pune</span><span></span>
+        <span style="font-size:14px;line-height:1.5;margin-top:6px;grid-column:1 / -1;text-wrap:pretty">Digital experiences and visual design across web and campaign touchpoints.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:18px 0;border-top:1px solid var(--hair)">
+        <span style="font-size:16px;font-weight:500">Graphic Design Intern</span>
+        <span style="font-size:13px;color:var(--muted);text-align:right">Jul 2024 — Dec 2024</span>
+        <span style="font-size:14px;color:var(--muted)">AgroStar, Pune</span><span></span>
+        <span style="font-size:14px;line-height:1.5;margin-top:6px;grid-column:1 / -1;text-wrap:pretty">Graphic design for marketing and product communication.</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <h2 style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Skills &amp; tools</h2>
+      <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)"><span style="font-size:13px;color:var(--muted)">Design</span><span style="font-size:15px">Figma, Illustrator, Photoshop</span></div>
+      <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)"><span style="font-size:13px;color:var(--muted)">Prototype / build</span><span style="font-size:15px">Framer, Webflow, Lottie, Jitter</span></div>
+      <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)"><span style="font-size:13px;color:var(--muted)">Video / motion</span><span style="font-size:15px">Premiere Pro</span></div>
+      <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)"><span style="font-size:13px;color:var(--muted)">Documentation</span><span style="font-size:15px">Notion</span></div>
+      <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)"><span style="font-size:13px;color:var(--muted)">Focus</span><span style="font-size:15px">Mobile app design, UX/UI, design systems, prototyping</span></div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:20px;margin-top:72px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px">
+      <h2 style="margin:0;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">AI workflow</h2>
+      <p style="margin:0;font-family:'Newsreader',serif;font-style:italic;font-size:18px;color:var(--muted)">AI cuts prototyping from days to hours; the decisions stay mine.</p>
+    </div>
+    <div role="region" aria-label="AI tools in order of use" style="overflow:hidden;margin:0 -28px;padding:4px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)">
+      <div style="display:flex;width:max-content;animation:aiFlow 40s linear infinite" style-hover="animation-play-state:paused"><ul style="margin:0;padding:0 12px 0 0;list-style:none;display:flex;align-items:center;gap:12px;flex:none"><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">ChatGPT</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">NotebookLM</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Relume</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Stitch</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Figma Make</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Framer AI</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Lovable</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Figma agents</li> <li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li> <li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Figma MCP</li> <li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li> <li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Cursor</li> <li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li> <li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Claude Code</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Antigravity</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">ElevenLabs</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Firefly</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Claude</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li></ul><ul aria-hidden="true" style="margin:0;padding:0 12px 0 0;list-style:none;display:flex;align-items:center;gap:12px;flex:none"><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">ChatGPT</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">NotebookLM</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Relume</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Stitch</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Figma Make</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Framer AI</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Lovable</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Figma agents</li> <li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li> <li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Figma MCP</li> <li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li> <li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Cursor</li> <li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li> <li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Claude Code</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Antigravity</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">ElevenLabs</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Firefly</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li><li style="flex:none;font-size:15px;padding:10px 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap">Claude</li><li aria-hidden="true" style="flex:none;color:oklch(0.78 0.14 60)">→</li></ul></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer style="border-top:1px solid var(--hair)">
+  <div style="max-width:1240px;margin:0 auto;padding:22px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)"><span>Rajnandani Haldiya</span><span>© 2026</span><a href="#top">Back to top ↑</a></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { done: [true, false, false, false, false, false], lb: -1, meow: 0, playing: false };
+  closeRef = React.createRef();
+  arts = [['assets/about/hot-a1.png', 'Pencil-and-paint study of eyes'], ['assets/about/hot-a2.png', 'Swirling blue painting of a boat, in a Van Gogh style'], ['assets/about/hot-a3.png', 'Anime character canvases on easels'], ['assets/about/hot-a4.png', 'Spider-Man canvas in progress']];
+  componentDidMount() {
+    this.onKey = e => {
+      if (this.state.lb < 0) return;
+      if (e.key === 'Escape') this.closeLb();
+      if (e.key === 'ArrowRight') this.step(1);
+      if (e.key === 'ArrowLeft') this.step(-1);
+    };
+    window.addEventListener('keydown', this.onKey);
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); clearTimeout(this.mt); }
+  openLb(i, e) { this.opener = e && e.currentTarget; this.setState({ lb: i }, () => this.closeRef.current && this.closeRef.current.focus()); }
+  closeLb() { this.setState({ lb: -1 }, () => this.opener && this.opener.focus()); }
+  step(d) { this.setState(s => ({ lb: (s.lb + d + 4) % 4 })); }
+  startMusic() {
+    const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
+    const ctx = this.ac = new AC(); const out = ctx.createGain(); out.gain.value = 0; out.connect(ctx.destination);
+    out.gain.linearRampToValueAtTime(0.05, ctx.currentTime + 1.2);
+    const notes = [261.63, 329.63, 392, 493.88, 440, 329.63, 392, 293.66]; let i = 0;
+    const play = () => { const t = ctx.currentTime; const o = ctx.createOscillator(), g = ctx.createGain(); o.type = 'sine'; o.frequency.value = notes[i++ % notes.length]; g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(1, t + 0.08); g.gain.exponentialRampToValueAtTime(0.001, t + 1.6); o.connect(g); g.connect(out); o.start(t); o.stop(t + 1.7); };
+    play(); this.mi = setInterval(play, 650); this.out = out;
+  }
+  stopMusic() { clearInterval(this.mi); if (this.ac) { const a = this.ac; try { this.out.gain.linearRampToValueAtTime(0, a.currentTime + 0.3); } catch (e) {} setTimeout(() => a.close(), 400); this.ac = null; } }
+  renderVals() {
+    const d = this.state.done, lb = this.state.lb, v = {};
+    d.forEach((on, i) => {
+      v['td' + i] = on; v['ck' + i] = i === 0 ? (on ? 0 : 0) : (on ? 1 : 0); v['cs' + i] = on ? 1 : 0.4; v['sw' + i] = on && i !== 0 ? 1 : (i === 0 && on ? 1 : 0);
+      v['tg' + i] = () => this.setState(s => { const n = s.done.slice(); n[i] = !n[i]; return { done: n }; });
+    });
+    v.un0 = d[0] ? 0 : 1;
+    this.arts.forEach((a, i) => { v['open' + i] = e => this.openLb(i, e); });
+    const memo = ['meow ♡', 'mrrp?', 'purr…', 'feed me', '…zzz'];
+    return { ...v,
+      lbOpen: lb >= 0, lb0: lb === 0, lb1: lb === 1, lb2: lb === 2, lb3: lb === 3, lbAlt: lb >= 0 ? this.arts[lb][1] : '',
+      close: () => this.closeLb(), stop: e => e.stopPropagation(), prev: () => this.step(-1), next: () => this.step(1), closeRef: this.closeRef,
+      meow: () => { clearTimeout(this.mt); this.setState(s => ({ meow: s.meow + 1, showMeow: true })); this.mt = setTimeout(() => this.setState({ showMeow: false }), 1400); },
+      meowText: memo[(this.state.meow - 1 + memo.length) % memo.length], meowOp: this.state.showMeow ? 1 : 0, meowY: this.state.showMeow ? '0' : '6px',
+      playing: this.state.playing, playOp: this.state.playing ? 1 : 0, musicLabel: this.state.playing ? 'Pause music' : 'Play music',
+      toggleMusic: () => { if (this.state.playing) this.stopMusic(); else this.startMusic(); this.setState(s => ({ playing: !s.playing })); }
+    };
+  }
+}
+</script>
+</body>
+</html>

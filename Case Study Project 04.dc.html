@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="comet-cursor.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Caveat:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+html{scroll-behavior:smooth}
+[data-theme=dark]{--bg:#1a1a18;--ink:#eceae4;--muted:#a19e95;--hair:rgba(236,234,228,.16);--card:#21211e;--inv:#eceae4;--invink:#1a1a18}
+[data-theme=light]{--bg:#f3f0e8;--ink:#1c1b18;--muted:#5d5a53;--hair:rgba(28,27,24,.16);--card:#ebe7dc;--inv:#1c1b18;--invink:#f3f0e8}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit;opacity:.75}
+</style>
+</helmet>
+<div data-theme="dark" style="background:var(--bg);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;min-height:100vh;transition:background .3s,color .3s" id="top">
+<header style="position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--hair)">
+  <nav style="max-width:1240px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Portfolio v2.dc.html#work" style="font-size:13px;padding:7px 13px;border:1px solid var(--hair);border-radius:999px">← All work</a>
+    <a href="Portfolio v2.dc.html" style="font-family:'Newsreader',serif;font-size:19px">Rajnandani Haldiya</a>
+    <span aria-hidden="true" style="width:88px"></span>
+  </nav>
+</header>
+
+<main>
+<section style="max-width:1240px;margin:0 auto;padding:64px 28px 0">
+  <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px">
+    <span style="font-size: 12px; color: var(--muted);">Case study</span>
+    <span style="font-size: 12px; padding: 4px 10px; border: 1px solid var(--hair); border-radius: 999px;">Category to add</span>
+    <span style="font-size: 12px; padding: 4px 10px; border-radius: 999px; background: oklch(0.88 0.11 92); color: rgb(28, 27, 24);">Placeholder</span>
+  </div>
+  <h1 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(56px,9vw,128px);letter-spacing:-.03em;line-height:.92">Project 04</h1>
+  <p style="margin:24px 0 0;max-width:720px;font-family:'Newsreader',serif;font-size:clamp(22px,2.4vw,30px);line-height:1.25;text-wrap:pretty">One-line description to add.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:20px;margin-top:44px;padding:22px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)">
+    <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Role</span><span style="font-size:15px">To add</span></div>
+    
+      <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Team</span><span style="font-size:15px">To add</span></div>
+    
+      <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Timeline</span><span style="font-size:15px">To add</span></div>
+    
+      <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Tools</span><span style="font-size:15px">To add</span></div>
+  </div>
+  <div style="margin-top:32px;aspect-ratio:16/8;border-radius:14px;background:repeating-linear-gradient(135deg,var(--hair) 0 1px,transparent 1px 11px);border:1px solid var(--hair);display:flex;align-items:center;justify-content:center;font:12px ui-monospace,Menlo,monospace;color:var(--muted)">hero — key visuals</div>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:80px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:48px">
+  <aside style="grid-column:span 1;max-width:260px">
+    <div style="position:sticky;top:90px;display:flex;flex-direction:column">
+      <span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">The story</span>
+      <a href="#ch1" style="display:flex;gap:12px;padding:8px 0;border-top:1px solid var(--hair);font-size:13px"><span style="color:var(--muted);width:18px">01</span>The Context</a>
+      
+        <a href="#ch2" style="display:flex;gap:12px;padding:8px 0;border-top:1px solid var(--hair);font-size:13px"><span style="color:var(--muted);width:18px">02</span>The Problem</a>
+      
+        <a href="#ch3" style="display:flex;gap:12px;padding:8px 0;border-top:1px solid var(--hair);font-size:13px"><span style="color:var(--muted);width:18px">03</span>The Process</a>
+      
+        <a href="#ch4" style="display:flex;gap:12px;padding:8px 0;border-top:1px solid var(--hair);font-size:13px"><span style="color:var(--muted);width:18px">04</span>The Solution</a>
+      
+        <a href="#ch5" style="display:flex;gap:12px;padding:8px 0;border-top:1px solid var(--hair);font-size:13px"><span style="color:var(--muted);width:18px">05</span>The Reflection</a>
+    </div>
+  </aside>
+  <div style="grid-column:span 3;display:flex;flex-direction:column;gap:88px;min-width:0">
+    <article id="ch1" style="display:flex;flex-direction:column;gap:18px;scroll-margin-top:90px">
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:'Newsreader',serif;font-size:20px;color:var(--muted)">01</span><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Who is it for?</span></div>
+        <h2 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);letter-spacing:-.02em;line-height:1.05">The Context</h2>
+        <p style="margin:0;max-width:680px;font-size:17px;line-height:1.65;text-wrap:pretty">To add.</p>
+        
+        
+          <div style="aspect-ratio:16/9;border-radius:12px;background:repeating-linear-gradient(135deg,var(--hair) 0 1px,transparent 1px 11px);border:1px solid var(--hair);display:flex;align-items:center;justify-content:center;font:12px ui-monospace,Menlo,monospace;color:var(--muted);text-align:center;padding:12px">context visual</div>
+        
+      </article>
+    
+      <article id="ch2" style="display:flex;flex-direction:column;gap:18px;scroll-margin-top:90px">
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:'Newsreader',serif;font-size:20px;color:var(--muted)">02</span><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">What was in the way?</span></div>
+        <h2 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);letter-spacing:-.02em;line-height:1.05">The Problem</h2>
+        <p style="margin:0;max-width:680px;font-size:17px;line-height:1.65;text-wrap:pretty">To add.</p>
+        
+        
+      </article>
+    
+      <article id="ch3" style="display:flex;flex-direction:column;gap:18px;scroll-margin-top:90px">
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:'Newsreader',serif;font-size:20px;color:var(--muted)">03</span><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">How you got there</span></div>
+        <h2 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);letter-spacing:-.02em;line-height:1.05">The Process</h2>
+        <p style="margin:0;max-width:680px;font-size:17px;line-height:1.65;text-wrap:pretty">To add.</p>
+        
+        
+          <div style="aspect-ratio:16/9;border-radius:12px;background:repeating-linear-gradient(135deg,var(--hair) 0 1px,transparent 1px 11px);border:1px solid var(--hair);display:flex;align-items:center;justify-content:center;font:12px ui-monospace,Menlo,monospace;color:var(--muted);text-align:center;padding:12px">process visuals</div>
+        
+      </article>
+    
+      <article id="ch4" style="display:flex;flex-direction:column;gap:18px;scroll-margin-top:90px">
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:'Newsreader',serif;font-size:20px;color:var(--muted)">04</span><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Final design</span></div>
+        <h2 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);letter-spacing:-.02em;line-height:1.05">The Solution</h2>
+        <p style="margin:0;max-width:680px;font-size:17px;line-height:1.65;text-wrap:pretty">To add.</p>
+        
+        
+          <div style="aspect-ratio:16/9;border-radius:12px;background:repeating-linear-gradient(135deg,var(--hair) 0 1px,transparent 1px 11px);border:1px solid var(--hair);display:flex;align-items:center;justify-content:center;font:12px ui-monospace,Menlo,monospace;color:var(--muted);text-align:center;padding:12px">final screens</div>
+        
+      </article>
+    
+      <article id="ch5" style="display:flex;flex-direction:column;gap:18px;scroll-margin-top:90px">
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:'Newsreader',serif;font-size:20px;color:var(--muted)">05</span><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Learnings</span></div>
+        <h2 style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);letter-spacing:-.02em;line-height:1.05">The Reflection</h2>
+        <p style="margin:0;max-width:680px;font-size:17px;line-height:1.65;text-wrap:pretty">To add.</p>
+        
+        
+      </article>
+  </div>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:0 28px 80px">
+  <a href="Case Study Project 05.dc.html" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;padding:32px;border-radius:16px;background:var(--card);border:1px solid var(--hair)" style-hover="border-color:var(--ink)">
+    <div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Next project · 05</span><span style="font-family:'Newsreader',serif;font-size:clamp(32px,4vw,52px);letter-spacing:-.02em">Project 05</span></div>
+    <span style="font-size:14px;font-weight:500;padding:12px 20px;border-radius:999px;background:var(--inv);color:var(--invink)">Next →</span>
+  </a>
+</section>
+</main>
+<footer style="border-top:1px solid var(--hair)">
+  <div style="max-width:1240px;margin:0 auto;padding:22px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)"><span>Rajnandani Haldiya</span><span>© 2026</span><a href="#top">Back to top ↑</a></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { theme: 'dark' };
+  renderVals() {
+    const ch = [
+      ['The Context','Who is it for?','To add.',null,'context visual'],
+      ['The Problem','What was in the way?','To add.',null,null],
+      ['The Process','How you got there','To add.',null,'process visuals'],
+      ['The Solution','Final design','To add.',null,'final screens'],
+      ['The Reflection','Learnings','To add.',null,null]
+    ];
+    return {
+      theme: this.state.theme,
+      themeLabel: this.state.theme === 'dark' ? 'Dark' : 'Light',
+      toggleTheme: () => {
+        const t = this.state.theme === 'dark' ? 'light' : 'dark';
+        try { localStorage.setItem('rh-theme', t); } catch (e) {}
+        this.setState({ theme: t });
+      },
+      meta: [{ k: 'Role', v: 'To add' }, { k: 'Team', v: 'To add' }, { k: 'Timeline', v: 'To add' }, { k: 'Tools', v: 'To add' }],
+      chapters: ch.map((c, i) => ({ n: String(i + 1).padStart(2, '0'), id: 'ch' + (i + 1), href: '#ch' + (i + 1), title: c[0], q: c[1], body: c[2], note: c[3], img: c[4] }))
+    };
+  }
+}
+</script>
+</body>
+</html>

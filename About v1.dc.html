@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="comet-cursor.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Caveat:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth}
+[data-theme=dark]{--bg:#1b1b1a;--ink:#eceae4;--muted:#a19e95;--line:#e6e3da;--hair:rgba(236,234,228,.16);--card:#21211e;--inv:#eceae4;--invink:#1a1a18}
+[data-theme=light]{--bg:#f3f0e8;--ink:#1c1b18;--muted:#5d5a53;--line:#1c1b18;--hair:rgba(28,27,24,.16);--card:#ebe7dc;--inv:#1c1b18;--invink:#f3f0e8}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit;opacity:.75}
+</style>
+</helmet>
+<div data-theme="dark" style="background:var(--bg);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;min-height:100vh" id="top">
+<header style="position:sticky;top:0;z-index:40;background:var(--bg);box-shadow:0 1px 0 var(--hair)">
+  <div style="max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <a href="Portfolio v2.dc.html" style="font-family:'Newsreader',serif;font-size:20px;letter-spacing:-.01em;min-height:40px;display:flex;align-items:center" style-focus="outline:2px solid var(--ink);outline-offset:3px;border-radius:6px">Rajnandani Haldiya</a>
+    <nav aria-label="Sections" style="display:flex;gap:8px">
+      <a href="Portfolio v2.dc.html#work" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;box-shadow:inset 0 0 0 1px var(--hair)" style-hover="background:var(--hair);opacity:1" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Projects</a>
+      <a href="About.dc.html" aria-current="page" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;background:var(--hair)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">About</a>
+      <a href="Portfolio v2.dc.html#resume" style="display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px;border-radius:999px;transition:background-color .15s ease,opacity .15s ease,transform .1s ease;font-weight:500;background:var(--inv);color:var(--invink)" style-hover="opacity:.88;color:var(--invink)" style-active="transform:scale(.96)" style-focus="outline:2px solid var(--ink);outline-offset:2px">Resume</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section aria-labelledby="about-title" style="max-width:1240px;margin:0 auto;padding:64px 28px 96px">
+  <h1 id="about-title" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(48px,7vw,88px);line-height:1;letter-spacing:-.03em">About</h1>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px 72px;margin-top:32px">
+    <p style="margin:0;font-family:'Newsreader',serif;font-size:clamp(26px,2.8vw,36px);line-height:1.25;letter-spacing:-.01em;text-wrap:pretty">I started in graphic design, moved to screens at MCCIA, and now freelance on websites and interfaces — learning to ask <em>why</em> before I draw.</p>
+    <div style="display:flex;flex-direction:column;gap:16px;font-size:15px;line-height:1.65;color:var(--muted)">
+      <p style="margin:0;text-wrap:pretty">Visual design taught me hierarchy, restraint and how much a single detail can carry. Product design is teaching me the rest: constraints, flows, and the people on the other side of the screen.</p>
+      <p style="margin:0;text-wrap:pretty">On a product team I want to be the designer who makes complicated things feel obvious — and who can show the reasoning behind every screen.</p>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px 72px;margin-top:80px">
+    <div style="display:flex;flex-direction:column">
+      <h2 style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Experience</h2>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:18px 0;border-top:1px solid var(--hair)">
+          <span style="font-size:16px;font-weight:500">Freelance UX/UI &amp; Graphic Designer</span>
+          <span style="font-size:13px;color:var(--muted);text-align:right">Apr 2026 — Present</span>
+          <span style="font-size:14px;color:var(--muted)">Remote</span>
+          <span></span>
+          <span style="font-size:14px;line-height:1.5;margin-top:6px;grid-column:1 / -1;text-wrap:pretty">Websites and interfaces for small-business clients, including Swojas Enterprises and DAEvol.</span>
+        </div>
+      
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:18px 0;border-top:1px solid var(--hair)">
+          <span style="font-size:16px;font-weight:500">Digital Experience Designer</span>
+          <span style="font-size:13px;color:var(--muted);text-align:right">Jan 2025 — Mar 2026</span>
+          <span style="font-size:14px;color:var(--muted)">MCCIA, Pune</span>
+          <span></span>
+          <span style="font-size:14px;line-height:1.5;margin-top:6px;grid-column:1 / -1;text-wrap:pretty">Digital experiences and visual design across web and campaign touchpoints.</span>
+        </div>
+      
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:18px 0;border-top:1px solid var(--hair)">
+          <span style="font-size:16px;font-weight:500">Graphic Design Intern</span>
+          <span style="font-size:13px;color:var(--muted);text-align:right">Jul 2024 — Dec 2024</span>
+          <span style="font-size:14px;color:var(--muted)">AgroStar, Pune</span>
+          <span></span>
+          <span style="font-size:14px;line-height:1.5;margin-top:6px;grid-column:1 / -1;text-wrap:pretty">Graphic design for marketing and product communication.</span>
+        </div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <h2 style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Skills &amp; tools</h2>
+      <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)">
+          <span style="font-size:13px;color:var(--muted)">Design</span>
+          <span style="font-size:15px">Figma, Illustrator, Photoshop</span>
+        </div>
+      
+        <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)">
+          <span style="font-size:13px;color:var(--muted)">Prototype / build</span>
+          <span style="font-size:15px">Framer, Webflow, Lottie, Jitter</span>
+        </div>
+      
+        <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)">
+          <span style="font-size:13px;color:var(--muted)">Video / motion</span>
+          <span style="font-size:15px">Premiere Pro</span>
+        </div>
+      
+        <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)">
+          <span style="font-size:13px;color:var(--muted)">Documentation</span>
+          <span style="font-size:15px">Notion</span>
+        </div>
+      
+        <div style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--hair)">
+          <span style="font-size:13px;color:var(--muted)">Focus</span>
+          <span style="font-size:15px">Mobile app design, UX/UI, design systems, prototyping</span>
+        </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px 72px;margin-top:80px">
+    
+    <div>
+      <h2 style="margin:0 0 16px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Principles on my wall</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+        <div style="aspect-ratio:1;padding:18px;background:oklch(0.91 0.15 95);color:#1c1b18;border-radius:3px;transform:rotate(-2deg);display:flex;align-items:flex-end;font-family:'Caveat',cursive;font-size:26px;line-height:1.05">Design is thinking made visual.</div>
+        
+          <div style="aspect-ratio:1;padding:18px;background:oklch(0.77 0.15 10);color:#1c1b18;border-radius:3px;transform:rotate(1.5deg);display:flex;align-items:flex-end;font-family:'Caveat',cursive;font-size:26px;line-height:1.05">Do it unmotivated. Just do it.</div>
+        
+          <div style="aspect-ratio:1;padding:18px;background:oklch(0.82 0.15 150);color:#1c1b18;border-radius:3px;transform:rotate(-1deg);display:flex;align-items:flex-end;font-family:'Caveat',cursive;font-size:26px;line-height:1.05">What if it all works out?</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="art" style="margin-top:80px;scroll-margin-top:80px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:18px">
+      <h2 style="margin:0;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Art — the painting above my desk</h2>
+      <span style="font-size:13px;color:var(--muted)">Where my eye for colour and composition comes from.</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px">
+      <div style="aspect-ratio:4/5;border-radius:6px;background:repeating-linear-gradient(135deg,var(--hair) 0 1px,transparent 1px 11px);border:1px solid var(--hair);display:flex;align-items:flex-end;padding:12px;font:11px ui-monospace,Menlo,monospace;color:var(--muted)">artwork 01 — painting</div>
+      
+        <div style="aspect-ratio:4/5;border-radius:6px;background:repeating-linear-gradient(135deg,var(--hair) 0 1px,transparent 1px 11px);border:1px solid var(--hair);display:flex;align-items:flex-end;padding:12px;font:11px ui-monospace,Menlo,monospace;color:var(--muted)">artwork 02</div>
+      
+        <div style="aspect-ratio:4/5;border-radius:6px;background:repeating-linear-gradient(135deg,var(--hair) 0 1px,transparent 1px 11px);border:1px solid var(--hair);display:flex;align-items:flex-end;padding:12px;font:11px ui-monospace,Menlo,monospace;color:var(--muted)">artwork 03</div>
+      
+        <div style="aspect-ratio:4/5;border-radius:6px;background:repeating-linear-gradient(135deg,var(--hair) 0 1px,transparent 1px 11px);border:1px solid var(--hair);display:flex;align-items:flex-end;padding:12px;font:11px ui-monospace,Menlo,monospace;color:var(--muted)">artwork 04</div>
+    </div>
+  </div>
+</section>
+</main>
+<footer style="border-top:1px solid var(--hair)">
+  <div style="max-width:1240px;margin:0 auto;padding:22px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)"><span>Rajnandani Haldiya</span><span>© 2026</span><a href="#top">Back to top ↑</a></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
